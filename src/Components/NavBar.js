@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import '../App.css';
 
 function NavBar() {
+    const location = useLocation();
     const [hoveredLink, setHoveredLink] = useState(null);
 
     const handleLinkHover = (index) => {
@@ -25,65 +27,73 @@ function NavBar() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link
-                                className="nav-link"
-                                style={{
-                                    fontSize: '28px',
-                                    fontWeight: 'normal',
-                                    marginLeft: '30px',
-                                    marginRight: '30px',
-                                    color: hoveredLink === 0 ? '#20A876' : '#fff',
-                                }}
-                                href="#home"
-                                onMouseEnter={() => handleLinkHover(0)}
-                                onMouseLeave={handleLinkLeave}
-                            >
-                                Home
+                            <Nav.Link className="nav-link">
+                                <Link
+                                    className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+                                    to="/"
+                                    onMouseEnter={() => handleLinkHover(0)}
+                                    onMouseLeave={handleLinkLeave}
+                                    style={{
+                                        fontSize: '28px',
+                                        fontWeight: 'normal',
+                                        marginLeft: '30px',
+                                        marginRight: '30px',
+                                        color: hoveredLink === 0 ? '#20A876' : '#fff',
+                                    }}
+                                >
+                                    Home
+                                </Link>
                             </Nav.Link>
-                            <Nav.Link
-                                className="nav-link"
-                                style={{
-                                    fontSize: '28px',
-                                    fontWeight: 'normal',
-                                    marginLeft: '30px',
-                                    marginRight: '30px',
-                                    color: hoveredLink === 1 ? '#6929F2' : '#fff',
-                                }}
-                                href="#about"
-                                onMouseEnter={() => handleLinkHover(1)}
-                                onMouseLeave={handleLinkLeave}
-                            >
-                                About
+                            <Nav.Link className="nav-link">
+                                <Link
+                                    className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
+                                    to="/about"
+                                    onMouseEnter={() => handleLinkHover(1)}
+                                    onMouseLeave={handleLinkLeave}
+                                    style={{
+                                        fontSize: '28px',
+                                        fontWeight: 'normal',
+                                        marginLeft: '30px',
+                                        marginRight: '30px',
+                                        color: hoveredLink === 1 ? '#20A876' : '#fff',
+                                    }}
+                                >
+                                    About
+                                </Link>
                             </Nav.Link>
-                            <Nav.Link
-                                className="nav-link"
-                                style={{
-                                    fontSize: '28px',
-                                    fontWeight: 'normal',
-                                    marginLeft: '30px',
-                                    marginRight: '30px',
-                                    color: hoveredLink === 2 ? '#F1B807' : '#fff',
-                                }}
-                                href="#portfolio"
-                                onMouseEnter={() => handleLinkHover(2)}
-                                onMouseLeave={handleLinkLeave}
-                            >
-                                Portfolio
+                            <Nav.Link className="nav-link">
+                                <Link
+                                    className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}
+                                    to="/portfolio"
+                                    onMouseEnter={() => handleLinkHover(2)}
+                                    onMouseLeave={handleLinkLeave}
+                                    style={{
+                                        fontSize: '28px',
+                                        fontWeight: 'normal',
+                                        marginLeft: '30px',
+                                        marginRight: '30px',
+                                        color: hoveredLink === 2 ? '#20A876' : '#fff',
+                                    }}
+                                >
+                                    Portfolio
+                                </Link>
                             </Nav.Link>
-                            <Nav.Link
-                                className="nav-link"
-                                style={{
-                                    fontSize: '28px',
-                                    fontWeight: 'normal',
-                                    marginLeft: '30px',
-                                    marginRight: '30px',
-                                    color: hoveredLink === 3 ? '#F24968' : '#fff',
-                                }}
-                                href="#contact"
-                                onMouseEnter={() => handleLinkHover(3)}
-                                onMouseLeave={handleLinkLeave}
-                            >
-                                Contact
+                            <Nav.Link className="nav-link">
+                                <Link
+                                    className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
+                                    to="/contact"
+                                    onMouseEnter={() => handleLinkHover(3)}
+                                    onMouseLeave={handleLinkLeave}
+                                    style={{
+                                        fontSize: '28px',
+                                        fontWeight: 'normal',
+                                        marginLeft: '30px',
+                                        marginRight: '30px',
+                                        color: hoveredLink === 3 ? '#20A876' : '#fff',
+                                    }}
+                                >
+                                    Contact
+                                </Link>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
