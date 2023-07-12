@@ -173,8 +173,53 @@ body {
   margin-bottom: 10px;
 }
 
+/* About.css */
 
+/* About.css */
+.whole-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
 
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.left-arrow,
+.right-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.left-arrow button,
+.right-arrow button {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.arrow button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.myStory {
+  position: absolute;
+  top: 20%;
+  color: #fff;
+}
 
 .samImg {
   width: 300px;
