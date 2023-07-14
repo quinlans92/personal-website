@@ -54,6 +54,10 @@ body {
       #0B0A1F 100%);
 }
 
+.about-background {
+  background-color: navy !important;
+}
+
 /* *::before {
   content: "";
   position: absolute;
@@ -176,13 +180,6 @@ body {
 /* About.css */
 
 /* About.css */
-.whole-container {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-
-}
 
 .image-container {
   display: flex;
@@ -191,29 +188,25 @@ body {
 
 }
 
-.arrow-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.left-arrow,
+/* .left-arrow,
 .right-arrow {
   display: flex;
   align-items: center;
-}
+} */
 
 .left-arrow button,
 .right-arrow button {
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 90px;
+  margin-left: 90px;
 }
 
-.arrow button {
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
+.hiLeft-arrow button,
+.hiRight-arrow button {
+  margin-right: 90px;
+  margin-left: 90px;
 }
+
+
 
 .myStory {
   position: absolute;
@@ -232,6 +225,78 @@ body {
   background-color: transparent;
 }
 
+.SS {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  right: 0;
+  z-index: 1;
+}
+
+.HI {
+  position: absolute;
+  top: 71%;
+  left: 26%;
+  right: 0;
+  z-index: 1;
+}
+
+.hiImage-container {
+  display: flex;
+  align-items: center;
+}
+
+/* .hiImage-container .hiLeft-arrow,
+.hiImage-container .hiRight-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+} */
+
+/* .hiImage-container .hiLeft-arrow {
+  margin-right: 20px;
+}
+
+.hiImage-container .hiRight-arrow {
+  margin-left: 20px;
+} */
+
+.image-slider {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+/* .image-slider img {
+  margin-left: 20px;
+} */
+
+
+.image-container {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  right: 0;
+  background-color: rgba(188, 119, 240, 0.3);
+  padding-top: 55px;
+  padding-bottom: 10px;
+  /* Adjust the transparency level by modifying the last value (0.5) */
+}
+
+.hiImage-container {
+  position: absolute;
+  top: 71%;
+  left: 26%;
+  right: 0;
+  background-color: rgba(22, 212, 63, 0.3);
+  padding-top: 55px;
+  padding-bottom: 10px;
+  /* Adjust the transparency level by modifying the last value (0.5) */
+}
 
 @media (max-width: 1092px) {
   .hw {
