@@ -1,47 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 * {
-  padding: 0;
-  margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -49,25 +6,19 @@ body {
   height: 100vh;
   background: linear-gradient(to right,
       white 0%,
-      white 26%,
-      #0B0A1F 26%,
-      #0B0A1F 100%);
+      white 50%,
+      #A65151 50%,
+      #A65151 100%);
 }
 
-.about-background {
-  background-color: navy !important;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
+
+.designer {
+  font-family: 'Oswald', sans-serif;
+
 }
 
-/* *::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 33%;
-  height: 100%;
-  background-color: #fff;
-  z-index: -1;
-} */
+
 
 
 
@@ -77,13 +28,14 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+
 }
 
 .sidebar {
   float: left;
   position: fixed;
-  top: 90%;
-  margin-left: 20px;
+  top: 85%;
+  margin-left: 5px;
 }
 
 
@@ -102,6 +54,38 @@ body {
   padding: 20px;
 } */
 
+.opposite-center {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  /* Optionally, you can center it horizontally as well */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.opposite-center h1 {
+  font-size: 100px;
+  margin-left: 25px;
+
+}
+
+.col-sm-12-p {
+  position: absolute;
+  top: 45%;
+  right: 25%;
+}
+
+.col-sm-12-i {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+
+
+
+
 .welcome-sidebar {
   position: fixed;
   top: 50%;
@@ -109,7 +93,7 @@ body {
   transform: translateY(-50%);
   width: 80px;
   height: 100vh;
-  background-color: #0B0A1F;
+  background-color: #A65151;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,31 +172,42 @@ body {
 
 }
 
-/* .left-arrow,
-.right-arrow {
+.hiImage-container {
   display: flex;
   align-items: center;
-} */
+  justify-content: center;
 
-.left-arrow button,
-.right-arrow button {
-  margin-right: 90px;
-  margin-left: 90px;
 }
 
 .hiLeft-arrow button,
 .hiRight-arrow button {
-  margin-right: 90px;
-  margin-left: 90px;
+  position: fixed;
+  top: 90%;
 }
 
 
-
-.myStory {
-  position: absolute;
-  top: 20%;
-  color: #fff;
+.left-arrow button,
+.right-arrow button {
+  position: fixed;
+  top: 70%;
 }
+
+.left-arrow button {
+  left: calc(26% + 200px);
+}
+
+.right-arrow button {
+  right: 200px;
+}
+
+.hiLeft-arrow button {
+  left: calc(26% + 200px);
+}
+
+.hiRight-arrow button {
+  right: 200px;
+}
+
 
 .samImg {
   width: 300px;
@@ -227,76 +222,66 @@ body {
 
 .SS {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 26%;
   right: 0;
   z-index: 1;
+  padding-bottom: 10px;
 }
 
 .HI {
   position: absolute;
-  top: 71%;
+  top: 80%;
   left: 26%;
   right: 0;
   z-index: 1;
+  padding-bottom: 10px;
 }
-
-.hiImage-container {
-  display: flex;
-  align-items: center;
-}
-
-/* .hiImage-container .hiLeft-arrow,
-.hiImage-container .hiRight-arrow {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-} */
-
-/* .hiImage-container .hiLeft-arrow {
-  margin-right: 20px;
-}
-
-.hiImage-container .hiRight-arrow {
-  margin-left: 20px;
-} */
-
-.image-slider {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-}
-
-/* .image-slider img {
-  margin-left: 20px;
-} */
 
 
 .image-container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 26%;
   right: 0;
-  background-color: rgba(188, 119, 240, 0.3);
-  padding-top: 55px;
-  padding-bottom: 10px;
-  /* Adjust the transparency level by modifying the last value (0.5) */
+  height: 170px;
+
+  padding-top: 30px;
+
 }
 
 .hiImage-container {
   position: absolute;
-  top: 71%;
+  top: 80%;
   left: 26%;
   right: 0;
-  background-color: rgba(22, 212, 63, 0.3);
-  padding-top: 55px;
-  padding-bottom: 10px;
-  /* Adjust the transparency level by modifying the last value (0.5) */
+  height: 170px;
+  padding-top: 30px;
 }
+
+.about-container {
+  position: absolute;
+  left: 26%;
+  text-align: left;
+  color: #000;
+  margin-right: 20px;
+
+}
+
+.col-4-myS {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  z-index: 1;
+  background-color: rgb(255, 255, 255, 0.5);
+
+}
+
+.col-4-myS h2 {
+  text-align: center;
+
+}
+
 
 @media (max-width: 1092px) {
   .hw {

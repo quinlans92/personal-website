@@ -19,9 +19,9 @@ function NavBar() {
     };
 
     return (
-        <div className="navbar-container">
+        <div className="navbar-container" >
             <Navbar expand="lg" className="navbar">
-                <Container>
+                <Container style={{ backgroundClip: '##D9B1A3' }}>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
                     </Navbar.Toggle>
@@ -38,7 +38,7 @@ function NavBar() {
                                         fontWeight: 'normal',
                                         marginLeft: '30px',
                                         marginRight: '30px',
-                                        color: hoveredLink === 0 ? '#20A876' : '#fff',
+                                        color: hoveredLink === 0 ? '#000' : '#A65151'
                                     }}
                                 >
                                     Home
@@ -55,7 +55,7 @@ function NavBar() {
                                         fontWeight: 'normal',
                                         marginLeft: '30px',
                                         marginRight: '30px',
-                                        color: hoveredLink === 1 ? '#20A876' : '#fff',
+                                        color: hoveredLink === 1 ? '#000' : '#A65151',
                                     }}
                                 >
                                     About
@@ -72,7 +72,7 @@ function NavBar() {
                                         fontWeight: 'normal',
                                         marginLeft: '30px',
                                         marginRight: '30px',
-                                        color: hoveredLink === 2 ? '#20A876' : '#fff',
+                                        color: hoveredLink === 2 ? '#000' : '#fff',
                                     }}
                                 >
                                     Portfolio
@@ -89,7 +89,7 @@ function NavBar() {
                                         fontWeight: 'normal',
                                         marginLeft: '30px',
                                         marginRight: '30px',
-                                        color: hoveredLink === 3 ? '#20A876' : '#fff',
+                                        color: hoveredLink === 3 ? '#000' : '#fff',
                                     }}
                                 >
                                     Contact

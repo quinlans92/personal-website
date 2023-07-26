@@ -16,36 +16,25 @@ const LandingPage = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container-me">
+            <div className='col-sm-12-p'>
+                <p className='designer' style={{ fontSize: '35px', fontWeight: 'bold' }}>Hey, I'm <span style={{ color: '#fff' }}>Samantha</span>,<br />Welcome to my website.</p>
+            </div>
+            <div className="col-sm-12-i">
+                <img className='samImg' src={samQuinlanImage} alt="Sam Quinlan" />
+            </div>
             <div className="row">
-                <div className="col-sm-6" style={{ display: 'flex', height: '100vh', alignItems: 'center' }}>
-                    <div style={{ width: '22%', marginLeft: '22%' }}>
-                        <img className='samImg'
-                            src={samQuinlanImage}
-                            alt="Sam Quinlan"
-                        // style={{ width: '350px', height: '350px', objectFit: 'cover' }}
-                        />
+                <div className="col-sm-12">
+                    <div className="opposite-center">
+                        <h1 style={{ color: '#A65151' }}>UI</h1>
+                        <h1 style={{ color: '#fff' }}>UX</h1>
                     </div>
-                    {/* to move the position of hello world */}
-                    <div className='hw' style={{
-                        position: 'absolute',
-                        right: '57%',
-                        fontSize: '48px',
-                        fontWeight: 'bolder',
-                    }}>Hello<br /> World
-                    </div>
-                </div>
-                <div className="col-sm-6" style={{ display: 'flex', height: '100vh', alignItems: 'center', textAlign: 'left' }}>
-                    <p style={{ color: '#fff', fontSize: '20px' }}>
-                        <h2 style={{ color: '#fff' }}>I'm <span style={{ color: '#6929F2', fontWeight: 'bold' }}>Samantha</span></h2><br />
-                        Welcome to my personal website! I'm a talented designer passionate about pursuing a career in UX. I thoroughly enjoy the programming and design elements, blending creativity with technology to craft seamless user experiences. Explore my portfolio and join me in shaping the future of user centric design and technology.
-                        <br /><br />
-                        <button style={{ color: '#0B0A1F', backgroundColor: '#F1B807', fontWeight: 'bold', border: 'none' }} onClick={handleDownload} className='btn btn-primary btn-lg' >Download CV</button>
-                    </p>
                 </div>
             </div>
         </div>
+
+
     );
 }
 
-export default LandingPage
+export default LandingPage;
