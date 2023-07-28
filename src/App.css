@@ -13,12 +13,16 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
+
 .designer {
   font-family: 'Oswald', sans-serif;
 
 }
 
-
+.myS {
+  font-family: 'Sacramento', cursive;
+}
 
 
 
@@ -36,6 +40,21 @@ body {
   position: fixed;
   top: 85%;
   margin-left: 5px;
+}
+
+/* Add this CSS in your stylesheet or style block */
+.popup-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* Add any other styling you want to make it fancy */
 }
 
 
