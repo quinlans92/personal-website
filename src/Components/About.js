@@ -285,26 +285,40 @@
 import React, { useState } from 'react';
 import imageone from '../images/image1.png';
 import imagetwo from '../images/image2.png';
+import PopUp from './PopUp'; // Import the PopUp component
 
 const About = () => {
-
     const [showMenu, setShowMenu] = useState(false);
+    const [popupMessage, setPopupMessage] = useState('');
+    const [popupImage, setPopupImage] = useState('');
+    const [popupHeading, setPopupHeading] = useState('');
 
-    // Step 2: Event handlers to toggle the state when the images are hovered over
     const handleImageOneHover = () => {
         setShowMenu(true);
+        setPopupMessage('This is Image 1 popup message.');
+        setPopupImage(imageone);
+        setPopupHeading('Image 1 Heading');
     };
 
     const handleImageOneLeave = () => {
         setShowMenu(false);
+        setPopupMessage('');
+        setPopupImage('');
+        setPopupHeading('');
     };
 
     const handleImageTwoHover = () => {
         setShowMenu(true);
+        setPopupMessage('This is Image 2 popup message.');
+        setPopupImage(imagetwo);
+        setPopupHeading('Image 2 Heading');
     };
 
     const handleImageTwoLeave = () => {
         setShowMenu(false);
+        setPopupMessage('');
+        setPopupImage('');
+        setPopupHeading('');
     };
 
     return (
@@ -325,6 +339,7 @@ const About = () => {
                         className="skill-image"
                         src={imageone}
                         alt="Image 1"
+                        style={{ marginLeft: '50px' }}
                         onMouseEnter={handleImageOneHover}
                         onMouseLeave={handleImageOneLeave}
                     />
@@ -332,16 +347,14 @@ const About = () => {
                         className="skill-image"
                         src={imagetwo}
                         alt="Image 2"
+                        style={{ marginLeft: '50px' }}
                         onMouseEnter={handleImageTwoHover}
                         onMouseLeave={handleImageTwoLeave}
                     />
                     {/* Step 3: Conditional rendering of the pop-up menu */}
-                    {showMenu && (
-                        <div className="popup-menu">
-                            {/* Your fancy pop-up menu content goes here */}
-                            <p>This is a fancy pop-up menu!</p>
-                        </div>
-                    )}
+                    {showMenu && <PopUp message={popupMessage}
+                        imageSrc={popupImage}
+                        heading={popupHeading} />}
                 </div>
             </div>
         </div>
@@ -349,6 +362,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
