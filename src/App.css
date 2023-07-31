@@ -65,6 +65,17 @@ body {
   margin-bottom: 10px;
 }
 
+.skills-container {
+  position: relative;
+  left: 50px;
+  /* Adjust the value as per your requirement */
+}
+
+.headingsAbout {
+  position: relative;
+  left: 170px;
+}
+
 
 
 /* .socials-sidebar {

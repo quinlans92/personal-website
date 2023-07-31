@@ -283,8 +283,38 @@
 // export default About;
 
 import React, { useState } from 'react';
-import imageone from '../images/image1.png';
-import imagetwo from '../images/image2.png';
+import ps from '../images/photoshop.png';
+import ai from '../images/illustrator.png';
+import ae from '../images/afterEffects.png';
+import css from '../images/css.png';
+import dw from '../images/dreamweaver.png';
+import lr from '../images/lightroom.png';
+import html from '../images/html.png';
+import js from '../images/javascript.png';
+import figma from '../images/figma.png';
+import react from '../images/react.png';
+import vs from '../images/vsCode.png';
+import p5 from '../images/p5.png';
+import flower from '../images/flower.png';
+import camera from '../images/camera.png';
+import headphones from '../images/headphones.png';
+import pencil from '../images/pencil.png';
+import icecream from '../images/icecream.png';
+import coffee from '../images/coffee.png';
+import paw from '../images/paw.png';
+import weight from '../images/weight.png';
+
+
+
+
+
+
+
+
+
+
+
+
 import PopUp from './PopUp'; // Import the PopUp component
 
 const About = () => {
@@ -296,7 +326,7 @@ const About = () => {
     const handleImageOneHover = () => {
         setShowMenu(true);
         setPopupMessage('This is Image 1 popup message.');
-        setPopupImage(imageone);
+        setPopupImage(ai);
         setPopupHeading('Image 1 Heading');
     };
 
@@ -310,7 +340,7 @@ const About = () => {
     const handleImageTwoHover = () => {
         setShowMenu(true);
         setPopupMessage('This is Image 2 popup message.');
-        setPopupImage(imagetwo);
+        setPopupImage(ps);
         setPopupHeading('Image 2 Heading');
     };
 
@@ -331,33 +361,158 @@ const About = () => {
                         Hey there! Let me share a little bit about my journey. I've always had this deep love for creativity and art—it's what truly drives me. I made the decision to head back to college as a mature student because I knew I had to follow my passion and pursue a career in the creative space.
                         Throughout my college journey, I've discovered a profound fascination with technology. Curiosity has been my constant companion.
                         As I near the end of college, I'm excitedly building my personal website, ready to showcase my skills and passion to potential employers. I can't wait to see what opportunities await me after I graduate in May 2024. My creative journey is just beginning.
+                        <img
+                            className="skill-image"
+                            src={pencil}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={camera}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={headphones}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={weight}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={paw}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={flower}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={icecream}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
+                        <img
+                            className="skill-image"
+                            src={coffee}
+                            alt="Image 2"
+                            onMouseEnter={handleImageTwoHover}
+                            onMouseLeave={handleImageTwoLeave}
+                        />
                     </p>
                 </div>
-                <div className='col-sm-6' style={{ padding: '20px' }}>
+                <div className='col-sm-6 skills-container'>
+                    <h2 className='headingsAbout' style={{ color: '#fff' }}>Skills and Software</h2>
                     {/* Step 2: Add event handlers to the images */}
                     <img
                         className="skill-image"
-                        src={imageone}
+                        src={html}
                         alt="Image 1"
-                        style={{ marginLeft: '50px' }}
                         onMouseEnter={handleImageOneHover}
                         onMouseLeave={handleImageOneLeave}
                     />
                     <img
                         className="skill-image"
-                        src={imagetwo}
+                        src={css}
                         alt="Image 2"
-                        style={{ marginLeft: '50px' }}
                         onMouseEnter={handleImageTwoHover}
                         onMouseLeave={handleImageTwoLeave}
                     />
-                    {/* Step 3: Conditional rendering of the pop-up menu */}
+                    <img
+                        className="skill-image"
+                        src={js}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={p5}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={react}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={dw}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={vs}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={ps}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={ai}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={ae}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={lr}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
+                    <img
+                        className="skill-image"
+                        src={figma}
+                        alt="Image 2"
+                        onMouseEnter={handleImageTwoHover}
+                        onMouseLeave={handleImageTwoLeave}
+                    />
                     {showMenu && <PopUp message={popupMessage}
                         imageSrc={popupImage}
                         heading={popupHeading} />}
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
