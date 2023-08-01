@@ -7,13 +7,7 @@ import '../App.css';
 
 const LandingPage = () => {
 
-    const handleDownload = () => {
 
-        const downloadLink = document.createElement('a');
-        downloadLink.href = 'https://drive.google.com/file/d/1dcEOCp0POzEMkX4v_1vYaxrA8-GnVTei/view?usp=sharing'; // Replace with the actual path to your CV file
-        downloadLink.download = 'cv.pdf'; // Replace with the desired filename for the downloaded file
-        downloadLink.click();
-    };
 
     return (
         <div className="container-me">

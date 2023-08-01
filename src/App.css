@@ -78,6 +78,7 @@ body {
 
 
 
+
 /* .socials-sidebar {
   position: fixed;
   top: 50%;
@@ -161,16 +162,7 @@ body {
   border-radius: 2px;
 }
 
-/* .socials-sidebar :before {
-  content: "";
-  position: absolute;
-  margin-top: 115px;
-  top: 0;
-  width: 3px;
-  height: 175px;
-  background-color: white;
-  right: 44%;
-} */
+
 
 .welcome-sidebar :after {
   content: "";
@@ -183,26 +175,6 @@ body {
   left: 44%;
 }
 
-/* 
-.socials-sidebar :after {
-  content: "";
-  position: absolute;
-  margin-bottom: 115px;
-  bottom: 0;
-  width: 3px;
-  height: 175px;
-  background-color: white;
-  right: 44%;
-} */
-
-
-.sidebar a {
-  margin-bottom: 10px;
-}
-
-/* About.css */
-
-/* About.css */
 
 .image-container {
   display: flex;
@@ -218,33 +190,9 @@ body {
 
 }
 
-.hiLeft-arrow button,
-.hiRight-arrow button {
-  position: fixed;
-  top: 90%;
-}
-
-
-.left-arrow button,
-.right-arrow button {
-  position: fixed;
-  top: 70%;
-}
-
-.left-arrow button {
-  left: calc(26% + 200px);
-}
-
-.right-arrow button {
-  right: 200px;
-}
-
-.hiLeft-arrow button {
-  left: calc(26% + 200px);
-}
-
-.hiRight-arrow button {
-  right: 200px;
+.Story {
+  position: absolute;
+  left: 5%;
 }
 
 
@@ -254,28 +202,6 @@ body {
   object-fit: cover;
 }
 
-.hw {
-  color: #F24968;
-  background-color: transparent;
-}
-
-.SS {
-  position: absolute;
-  top: 60%;
-  left: 26%;
-  right: 0;
-  z-index: 1;
-  padding-bottom: 10px;
-}
-
-.HI {
-  position: absolute;
-  top: 80%;
-  left: 26%;
-  right: 0;
-  z-index: 1;
-  padding-bottom: 10px;
-}
 
 
 .image-container {

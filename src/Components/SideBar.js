@@ -43,11 +43,6 @@ const SideBar = () => {
                     />
                 </a>
             </div>
-            {/* {!isAboutPage && (
-                <div className="welcome-sidebar">
-                    <p>Welcome</p>
-                </div>
-            )} */}
         </div>
 
     )

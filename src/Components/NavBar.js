@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../App.css';
+import logo from '../images/logo.png';
 
 function NavBar() {
     const location = useLocation();
@@ -21,6 +22,9 @@ function NavBar() {
     return (
         <div className="navbar-container" >
             <Navbar expand="lg" className="navbar">
+                <div className="col-sm-2">
+                    <img className='logo' src={logo} style={{ width: '200px', height: '150px', float: 'left' }} alt="Sam Quinlan" />
+                </div>
                 <Container style={{ backgroundClip: '##D9B1A3' }}>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
