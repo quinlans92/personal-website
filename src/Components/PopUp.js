@@ -6,7 +6,6 @@ const PopUp = ({ message, imageSrc, heading }) => {
         <div>
             <div className="popup-container">
                 <img src={imageSrc} alt="Pop-up Image" />
-
                 <h2>{heading}</h2>
                 <p>{message}</p>
                 {/* You can add more content (images, headings, etc.) here */}

@@ -366,7 +366,7 @@ const About = () => {
                         As I near the end of college, I'm excitedly building my personal website, ready to showcase my skills and passion to potential employers. I can't wait to see what opportunities await me after I graduate in May 2024. My creative journey is just beginning.
                     </p>
                     <br />
-                    <div>
+                    {/* <div>
                         <img
                             className="hobbie-image"
                             src={pencil}
@@ -413,8 +413,8 @@ const About = () => {
                             style={{ marginLeft: '10px' }}
                             src={coffee}
                             alt="Image 2"
-                        />
-                    </div>
+                        /> */}
+                    {/* </div> */}
                 </div>
                 <div className='col-sm-6 skills-container'>
                     <h2 className='headingsAbout' style={{ color: '#fff' }}>Skills and Software</h2>

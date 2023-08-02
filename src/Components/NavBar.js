@@ -22,9 +22,6 @@ function NavBar() {
     return (
         <div className="navbar-container" >
             <Navbar expand="lg" className="navbar">
-                <div className="col-sm-2">
-                    <img className='logo' src={logo} style={{ width: '200px', height: '150px', float: 'left' }} alt="Sam Quinlan" />
-                </div>
                 <Container style={{ backgroundClip: '##D9B1A3' }}>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
@@ -67,8 +64,8 @@ function NavBar() {
                             </Nav.Link>
                             <Nav.Link className="nav-link">
                                 <Link
-                                    className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}
-                                    to="/portfolio"
+                                    className={`nav-link ${location.pathname === "/projects" ? "active" : ""}`}
+                                    to="/projects"
                                     onMouseEnter={() => handleLinkHover(2)}
                                     onMouseLeave={handleLinkLeave}
                                     style={{
@@ -79,7 +76,7 @@ function NavBar() {
                                         color: hoveredLink === 2 ? '#000' : '#fff',
                                     }}
                                 >
-                                    Portfolio
+                                    Projects
                                 </Link>
                             </Nav.Link>
                             <Nav.Link className="nav-link">
