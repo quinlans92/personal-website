@@ -4,7 +4,7 @@ import LandingPage from './Components/LandingPage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from './Components/NavBar';
-import SideBar from './Components/SideBar';
+import Socials from './Components/Socials';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import Projects from './Components/Projects';
@@ -13,25 +13,38 @@ import projectTwo from './images/projectTwo.png';
 import projectThree from './images/projectThree.png';
 import SingleProject from './Components/SingleProject';
 
+function importAll(r) {
+  let videos = {};
+  r.keys().forEach((item, index) => {
+    videos[item.replace('./', '')] = r(item);
+  });
+  return videos;
+}
+
+const videos = importAll(require.context('./videos', false, /\.mp4$/));
+
 
 const projects = [
   {
     id: 1,
-    Project: "Motion Mock Up",
     image: projectone,
-    desc: "this is a cool project"
+    features: "this is a cool project"
   },
   {
     id: 2,
-    Project: "KidsWeatherApp",
+    Project: "   Kids Weather App",
     image: projectTwo,
-    desc: "this is a cool project"
+    video: videos['AppDemo.mp4'], // Dynamically import video
+
+    features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
+
+
   },
   {
     id: 3,
     Project: "Hello",
     image: projectThree,
-    desc: "this is a cool project"
+    features: "this is a cool project"
   }
 
 
@@ -46,8 +59,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
-        <SideBar />
+
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
@@ -56,6 +69,8 @@ function App() {
           <Route path="/projects/:projectID" element={<SingleProject projects={samsProjects} />} />
         </Routes>
       </div>
+      <Socials />
+      <NavBar />
     </Router>
   );
 }

@@ -355,7 +355,7 @@ const About = () => {
     };
 
     return (
-        <div className="container" style={{ paddingTop: '100px' }}>
+        <div className="container abt-container">
             <div className="row">
                 {/* Left side - Text */}
                 <div className="col-sm-6">

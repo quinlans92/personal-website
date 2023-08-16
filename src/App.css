@@ -11,6 +11,16 @@ body {
       #A65151 100%);
 }
 
+.navbar-container {
+  background: linear-gradient(to right,
+      white 0%,
+      white 50%,
+      #A65151 50%,
+      #A65151 100%);
+
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
@@ -41,6 +51,7 @@ body {
   top: 85%;
   margin-left: 5px;
 }
+
 
 
 
@@ -75,6 +86,12 @@ body {
   background-color: #000;
 
 }
+
+.abt-container {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
 
 
 
