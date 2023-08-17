@@ -33,7 +33,7 @@ const Projects = ({ projects }) => {
                                 }} />
                             </Link>
                             <div className="card-body">
-                                <h2 className="card-title" style={{ color: '#fff' }}>{item.Project}</h2>
+                                <h3 className="card-title" style={{ color: '#fff' }}>{item.Project}</h3>
                                 <Link style={{
                                     backgroundColor: '#A65151',
                                     border: 'none',

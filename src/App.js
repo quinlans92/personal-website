@@ -8,9 +8,9 @@ import Socials from './Components/Socials';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import Projects from './Components/Projects';
-import projectone from './images/projectOne.png';
-import projectTwo from './images/projectTwo.png';
-import projectThree from './images/projectThree.png';
+import WeatherAppPic from './images/WeatherAppPic.png';
+import ThreadLairPic from './images/ThreadLairPic.png';
+import ReactRecipePic from './images/ReactRecipePic.png'
 import SingleProject from './Components/SingleProject';
 
 function importAll(r) {
@@ -27,24 +27,37 @@ const videos = importAll(require.context('./videos', false, /\.mp4$/));
 const projects = [
   {
     id: 1,
-    image: projectone,
-    features: "this is a cool project"
+    Project: "Motion Mock Up",
+    image: ThreadLairPic,
+    video: videos['ThreadLair.mp4'],
+    features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
+    Process: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
+    isCodeProject: false, // Not a code project
+
+
   },
   {
     id: 2,
     Project: "   Kids Weather App",
-    image: projectTwo,
+    image: WeatherAppPic,
     video: videos['AppDemo.mp4'], // Dynamically import video
 
     features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
+    Process: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
+    isCodeProject: true, // Not a code project
 
 
   },
   {
     id: 3,
-    Project: "Hello",
-    image: projectThree,
-    features: "this is a cool project"
+    Project: " React Recipe App",
+    image: ReactRecipePic,
+    video: videos['ReactRecipe.mp4'], // Dynamically import video
+
+    features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
+    Process: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
+    isCodeProject: true, // Not a code project
+
   }
 
 
