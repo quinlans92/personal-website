@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faHome, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
+import weatherAppDevices from '../images/WeatherAppDevised.png'
 
 
 
@@ -29,13 +30,20 @@ const SingleProject = ({ projects }) => {
     ));
 
     return (
-        <div className="container-fluid" style={{ paddingTop: '100px' }}>
+        <div className="container-fluid" style={{ paddingTop: '100px', backgroundColor: '#A65151' }}>
             <div className="row">
-                <div className='col-md-12 d-flex flex-column align-items-center align-md-start bg' style={{ color: '#000', fontSize: '26px', fontWeight: 'bold', padding: '10px', textTransform: 'uppercase', }}>
-                    {projectToDisplay.Project}
+                <div key={projectToDisplay.id}>
+                    <h2>{projectToDisplay.Project}</h2>
                 </div>
-                <div className="col-md-6">
+
+
+                <img src={weatherAppDevices} alt="weatherAppDevices" />
+                <div className="col-md-12">
                     <div className="d-flex flex-column align-items-center align-md-start">
+                        {projectToDisplay.dt.map((dt, index) => (
+                            <p key={index} style={{ fontSize: '24px', }}>Date of Project: {dt}</p>
+                        ))}
+
                         <p style={{ fontSize: '24px', fontWeight: 'bold', float: 'left', marginTop: '20px', marginBottom: '40px' }}>Demo</p>
                         <video
                             controls
@@ -95,7 +103,7 @@ const SingleProject = ({ projects }) => {
                     <div className="d-flex flex-column align-items-center align-md-start">
                         <p style={{ color: '#000', fontSize: '24px', fontWeight: 'bold', paddingLeft: '40px', paddingRight: '40px', marginTop: '20px', marginBottom: '40px' }}>Features</p>
                         {projectToDisplay.features.map((features, index) => (
-                            <p key={index} style={{ color: '#000', fontSize: '24px', }}>{features}</p>
+                            <p key={index} style={{ fontSize: '24px', }}>{features}</p>
                         ))}
                     </div>
                 </div>
@@ -105,7 +113,7 @@ const SingleProject = ({ projects }) => {
                 <div className="d-flex flex-column align-items-center align-md-start">
                     <p style={{ color: '#000', fontSize: '24px', fontWeight: 'bold', paddingLeft: '40px', paddingRight: '40px', marginTop: '40px', marginBottom: '40px' }}>Features</p>
                     {projectToDisplay.Process.map((Process, index) => (
-                        <p key={index} style={{ color: '#000', fontSize: '24px', }}>{Process}</p>
+                        <p key={index} style={{ fontSize: '24px', }}>{Process}</p>
                     ))}
                 </div>
             </div>

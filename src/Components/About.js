@@ -20,7 +20,8 @@ import icecream from '../images/icecream.png';
 import coffee from '../images/coffee.png';
 import paw from '../images/paw.png';
 import weight from '../images/weight.png';
-import PopUp from './PopUp'; // Import the PopUp component
+import PopUp from './PopUp';
+import view from '../images/view.png';
 
 const About = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -29,9 +30,9 @@ const About = () => {
     const [popupHeading, setPopupHeading] = useState('');
     const [isHovered, setIsHovered] = useState(false);
 
-    const handleHover = () => {
-        setIsHovered(!isHovered);
-    };
+    // const handleHover = () => {
+    //     setIsHovered(!isHovered);
+    // };
 
 
     const handleDownload = () => {
@@ -71,174 +72,169 @@ const About = () => {
     };
 
     return (
-        <div className="container abt-container">
+        <div className="container-fluid abt-container">
             <div className="row">
-                {/* Left side - Text */}
-                <div className="col-sm-6">
+                <div
+                    className="col-sm-12 text-center full-width-image-container"
+                    style={{
+                        backgroundColor: '#A65151',
+                        backgroundImage: `url(${view})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        position: 'relative',
+                    }}
+                >
+                    <img src={view} alt="view" style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div className="col-sm-12 text-center" style={{ backgroundColor: '#A65151' }}>
                     <h1 className="myS" style={{ fontSize: '60px' }}>My Story</h1>
-                    <p style={{ fontSize: '20px', fontWeight: 'bold' }}>
+                    <p style={{ color: 'white', fontSize: '20px', fontWeight: 'bold', padding: '50px' }}>
                         Hey there! Let me share a little bit about my journey. I've always had this deep love for creativity and art—it's what truly drives me. I made the decision to head back to college as a mature student because I knew I had to follow my passion and pursue a career in the creative space.
                         Throughout my college journey, I've discovered a profound fascination with technology. Curiosity has been my constant companion.
                         As I near the end of college, I'm excitedly building my personal website, ready to showcase my skills and passion to potential employers. I can't wait to see what opportunities await me after I graduate in May 2024. My creative journey is just beginning.
                     </p>
                     <br />
-                    <div>
-                        <img
-                            className="hobbie-image"
-                            src={pencil}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={camera}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={headphones}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={weight}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={paw}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={flower}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '15px' }}
-                            src={icecream}
-                            alt="Image 2"
-                        />
-                        <img
-                            className="hobbie-image"
-                            style={{ marginLeft: '10px' }}
-                            src={coffee}
-                            alt="Image 2"
-                        />
-                    </div>
                 </div>
-                <div className='col-sm-6 skills-container'>
+                <div className='col-sm-12 skills-container'>
                     <div className='heading' style={{ textAlign: 'center' }}>
-                        <h2 className='headingsAbout' style={{ fontWeight: 'bold' }}>Skills and Software</h2>
+                        <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#A65151' }}>Skills and Software</h2>
                     </div>
-                    <img
-                        className="skill-image"
-                        src={html}
-                        alt="Image 1"
-                        onMouseEnter={handleImageOneHover}
-                        onMouseLeave={handleImageOneLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={css}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={js}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={p5}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={react}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={dw}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={vs}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={ps}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={ai}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={ae}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={lr}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
-                    <img
-                        className="skill-image"
-                        src={figma}
-                        alt="Image 2"
-                        onMouseEnter={handleImageTwoHover}
-                        onMouseLeave={handleImageTwoLeave}
-                    />
+                    <div className='row' style={{ justifyContent: 'center', maxWidth: '900px', margin: '0 auto' }}>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={html}
+                                alt="Image 1"
+                                onMouseEnter={handleImageOneHover}
+                                onMouseLeave={handleImageOneLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={css}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={js}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={p5}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={react}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={dw}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={vs}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={ps}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={ai}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={ae}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={lr}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-6">
+                            <img
+                                className="skill-image"
+                                src={figma}
+                                alt="Image 2"
+                                onMouseEnter={handleImageTwoHover}
+                                onMouseLeave={handleImageTwoLeave}
+                            />
+                        </div>
+                    </div>
                     <br />
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <button
                             className="btn btn-primary btn-lg"
                             style={{
-                                backgroundColor: '#fff',
-                                border: 'none',
-                                fontSize: '30px',
-                                fontWeight: 'bold',
+                                backgroundColor: '#A65151',
+                                border: isHovered ? '2px solid white' : '2px solid #A65151',
+                                borderRadius: '30px',
+                                color: '#fff',
+                                display: 'inline-block',
+                                marginTop: '10px', // Add some margin to separate from the title
                                 transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-                                transition: 'transform 0.2s ease',
+                                backgroundColor: isHovered ? '#A65151' : '#fff',
+                                color: isHovered ? '#fff' : '#A65151',
+                                transition: 'transform 0.2s ease-in-out',
+                                padding: '10px 20px',
+                                textDecoration: 'none',
                                 // Add other styles as needed
                             }}
                             onClick={handleDownload}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
                         >
-                            <span style={{ color: '#A65151' }}>Download CV</span>
+                            Download CV
                         </button>
                     </div>
                     {showMenu && <PopUp message={popupMessage}

@@ -20,7 +20,7 @@ function NavBar() {
     };
 
     return (
-        <div className="navbar-container"  >
+        <div className="container-fluid navbar-container"  >
             <Navbar expand="lg" className="navbar">
                 <Container style={{ backgroundClip: '##D9B1A3' }}>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">

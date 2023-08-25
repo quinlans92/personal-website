@@ -27,6 +27,8 @@ const videos = importAll(require.context('./videos', false, /\.mp4$/));
 const projects = [
   {
     id: 1,
+    dt: ["8 / 4 / 22"],
+    category: ["UI Design, ", "Motion Graphics"],
     Project: "Motion Mock Up",
     image: ThreadLairPic,
     video: videos['ThreadLair.mp4'],
@@ -38,10 +40,11 @@ const projects = [
   },
   {
     id: 2,
+    dt: ["8 / 4 / 22"],
+    category: ["UI Design, ", "Graphic Design, ", "App Development"],
     Project: "   Kids Weather App",
     image: WeatherAppPic,
     video: videos['AppDemo.mp4'], // Dynamically import video
-
     features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
     Process: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
     isCodeProject: true, // Not a code project
@@ -50,10 +53,11 @@ const projects = [
   },
   {
     id: 3,
+    dt: ["8 / 4 / 22"],
+    category: ["UI Design, ", "Web Development, ", "App Development"],
     Project: " React Recipe App",
     image: ReactRecipePic,
     video: videos['ReactRecipe.mp4'], // Dynamically import video
-
     features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
     Process: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
     isCodeProject: true, // Not a code project

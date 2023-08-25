@@ -1,14 +1,18 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from 'react-modal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faAt, faHeart, faHandPeace } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faAt, faHeart, faHandPeace } from '@fortawesome/free-solid-svg-icons';
+import samEmoji from '../images/samEmoji.png';
+
 
 
 
 const Contact = () => {
     const form = useRef();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+
 
 
     const sendEmail = (e) => {
@@ -72,8 +76,25 @@ const Contact = () => {
                                 <textarea className="form-control" name="message" id="message" rows="5" required />
                             </div>
                             <div className="d-grid gap-2">
-                                <button type="submit" className="btn-epic btn-primary btn-lg" style={{ backgroundColor: '#fff', border: 'none' }}>
-                                    <span style={{ color: '#A65151', fontSize: '20px', fontWeight: 'bold' }}> Send </span>
+                                <button type="submit" className="btn-epic btn-primary btn-lg" style={{
+                                    backgroundColor: '#A65151',
+                                    border: isHovered ? '2px solid #A65151' : '2px solid white',
+                                    borderRadius: '30px',
+                                    color: '#A65151',
+                                    display: 'inline-block',
+                                    marginTop: '10px', // Add some margin to separate from the title
+                                    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                                    backgroundColor: isHovered ? '#fff' : '#A65151',
+                                    color: isHovered ? '#A65151' : '#fff',
+                                    transition: 'transform 0.2s ease-in-out',
+                                    padding: '10px 20px',
+                                    textDecoration: 'none',
+                                }}
+
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                >
+                                    Send
                                 </button>
                             </div>
                         </form>
@@ -82,13 +103,37 @@ const Contact = () => {
             </div>
 
             <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel="Message Sent">
-                <h2>Message Sent Successfully!</h2>
-                <p>Your message has been sent. Thank you!</p>
-                <button className="btn btn-primary" onClick={closeModal}>
-                    Close
-                </button>
+
+                <h2 className="text-center" >Message Sent Successfully!</h2>
+                <div className="d-flex justify-content-center">
+                    <img src={samEmoji} alt="Pop-up Image" />
+                </div>
+                <h3 className="text-center">Thank you!</h3>
+                <div className="d-flex justify-content-center">
+                    <button className="btn btn-primary btn-lg"
+                        style={{
+                            backgroundColor: '#A65151',
+                            border: isHovered ? '2px solid white' : '2px solid #A65151',
+                            borderRadius: '30px',
+                            color: '#fff',
+                            display: 'inline-block',
+                            marginTop: '10px', // Add some margin to separate from the title
+                            transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                            backgroundColor: isHovered ? '#A65151' : '#fff',
+                            color: isHovered ? '#fff' : '#A65151',
+                            transition: 'transform 0.2s ease-in-out',
+                            padding: '10px 20px',
+                            textDecoration: 'none',
+                        }} onClick={closeModal}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+
+                        Close
+                    </button>
+                </div>
             </Modal>
-        </div>
+        </div >
     );
 };
 
