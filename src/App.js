@@ -20,6 +20,9 @@ import bwMockUp from './images/bwMockUp.png';
 import colorPalWeather from './images/colorPallete.png';
 import fontKidApp from './images/fonts.png';
 import weatherAppPic2 from './images/WeatherAppPic2.png';
+import aiSw from './images/aiSw.png';
+import opSw from './images/opSw.png';
+import owSw from './images/owSw.png';
 
 function importAll(r) {
   let videos = {};
@@ -35,7 +38,7 @@ const videos = importAll(require.context('./videos', false, /\.mp4$/));
 const projects = [
   {
     id: 1,
-    dt: ["8 / 4 / 2022"],
+    dt: ["April 2022"],
     deviceImg: weatherAppDevices,
     sketch: [weatherSkecth, weatherSkecthTwo],
     bwMockUp: bwMockUp,
@@ -53,14 +56,14 @@ const projects = [
     image: ThreadLairPic,
     video: videos['ThreadLair.mp4'],
     features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
-    Software: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
+    Software: [aiSw, opSw, owSw],
     isCodeProject: false, // Not a code project
 
 
   },
   {
     id: 2,
-    dt: ["8 / 4 / 2022"],
+    dt: ["April 2022"],
     deviceImg: weatherAppDevices,
     sketch: [weatherSkecth, weatherSkecthTwo],
     bwMockUp: bwMockUp,
@@ -78,14 +81,14 @@ const projects = [
     image: WeatherAppPic,
     video: videos['AppDemo.mp4'], // Dynamically import video
     features: ["p5.js", "Real Time Weather Information", "JSON data", "Text to Speech", "Voice Recognition", "Geo-Location accuracy"],
-    Software: ["openprocessing", "Adobe illustrator", "OpenWeather API", "P5 Library"],
+    Software: [aiSw, opSw, owSw],
     isCodeProject: true, // Not a code project
 
 
   },
   {
     id: 3,
-    dt: ["8 / 4 / 2022"],
+    dt: ["April 2022"],
     deviceImg: ThreadLairPic,
     sketch: [weatherSkecth, weatherSkecthTwo],
     bwMockUp: bwMockUp,
@@ -102,7 +105,7 @@ const projects = [
     image: ReactRecipePic,
     video: videos['ReactRecipe.mp4'], // Dynamically import video
     features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
-    Software: ["openprocessing", "weekly reprt", "scheduling", "planning", "trello", "graphics"],
+    Software: [aiSw, opSw, owSw],
     isCodeProject: true, // Not a code project
 
   }

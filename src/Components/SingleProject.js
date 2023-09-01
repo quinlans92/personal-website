@@ -21,7 +21,16 @@ const SingleProject = ({ projects }) => {
         setIsHovered(false);
     };
 
-    const textColor = isHovered ? '#fff' : '#000';
+    const handleHighlightEnter = () => {
+        setIsHighlighted(true);
+    };
+
+    const handleHighlightLeave = () => {
+        setIsHighlighted(false);
+    };
+    const textColor = isHovered ? '#A65151' : '#000';
+
+    const [isHighlighted, setIsHighlighted] = useState(false); // Initialize isHighlighted state
 
 
 
@@ -46,110 +55,155 @@ const SingleProject = ({ projects }) => {
                         />
                     </Link>
                 </div>
-
-                <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Objective</h3>
-                    {projectToDisplay.objective.map((objective, index) => (
-                        <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px' }}>{objective}</p>
-                    ))}
+                <div className="col-md-12 text-center mt-4 whiteBg">
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Objective</h3>
+                        {projectToDisplay.objective.map((objective, index) => (
+                            <p key={index} className='objectiveText' style={{ fontSize: '20px', color: '#000', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px' }}>{objective}</p>
+                        ))}
+                    </div>
                 </div>
-
                 <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Brainstorming</h3>
-                    <Link to={`/projects/${projectToDisplay.id}`}>
-                        <img
-                            src={projectToDisplay.brainstorming}
-                            alt="Brainstorming"
-                            className="img-fluid"
-                            style={{ width: '80%', height: 'auto' }}
-                        />
-                    </Link>
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Brainstorming</h3>
+                        <Link to={`/projects/${projectToDisplay.id}`}>
+                            <img
+                                src={projectToDisplay.brainstorming}
+                                alt="Brainstorming"
+                                className="img-fluid"
+                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px', marginBottom: '30px' }}
+                            />
+                        </Link>
+                    </div>
                 </div>
-                <div className='d-flex justify-content-center'>
-                    <div className='col-md-8'>
+                <div className='d-flex justify-content-center whiteBg' >
+                    <div className='col-md-8' style={{ marginBottom: '30px' }}>
                         <div className='text-center'>
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Identified Challenges</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Identified Challenges</h3>
                         </div>
                         {projectToDisplay.ProblemsToSolve.map((ProblemsToSolve, index) => (
-                            <div key={index} className="bg-light p-3 rounded mb-3">
-                                <p style={{ color: '#A65151', fontWeight: 'bold', marginBottom: '30px' }} className="mb-0">{ProblemsToSolve}</p>
+                            <div key={index} className="bg-A65151 p-3 rounded mb-3 pinkCont">
+                                <p className="text-white" style={{ fontWeight: 'bold' }}>{ProblemsToSolve}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Early Sketch</h3>
-                    <div className="d-flex justify-content-center">
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Early Sketch</h3>
                         {projectToDisplay.sketch.map((sketchImage, index) => (
-                            <Link key={index} to={`/projects/${projectToDisplay.id}`}>
-                                <img
-                                    src={sketchImage}
-                                    alt={`sketch-${index}`}
-                                    className="img-fluid"
-                                    style={{ width: '90%', height: 'auto', margin: '10px', border: '10px solid white' }}
-                                />
-                            </Link>
+                            <div key={index} style={{ marginBottom: '20px' }}>
+                                <Link to={`/projects/${projectToDisplay.id}`}>
+                                    <img
+                                        src={sketchImage}
+                                        alt={`sketch-${index}`}
+                                        className="img-fluid"
+                                        style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                                    />
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="col-md-12 text-center mt-4 whiteBg">
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Mockup</h3>
+                        <Link to={`/projects/${projectToDisplay.id}`}>
+                            <img
+                                src={projectToDisplay.bwMockUp}
+                                alt="Brainstorming"
+                                className="img-fluid"
+                                style={{ width: '100%', height: 'auto', marginBottom: '30px', border: '3px solid #000', borderRadius: '9px' }}
+                            />
+                        </Link>
+                    </div>
+                </div>
+                <div className="col-md-12 text-center mt-4">
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
+                        <Link to={`/projects/${projectToDisplay.id}`}>
+                            <img
+                                src={projectToDisplay.colorPallete}
+                                alt="Brainstorming"
+                                className="img-fluid"
+                                style={{ width: '100%', height: 'auto' }}
+                            />
+                        </Link>
+                        {projectToDisplay.colorPalleteDes.map((colorPalleteDes, index) => (
+                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
+                        ))}
+                    </div>
+                </div>
+                <div className="col-md-12 text-center mt-4 whiteBg">
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Fonts</h3>
+                        <Link to={`/projects/${projectToDisplay.id}`}>
+                            <img
+                                src={projectToDisplay.font}
+                                alt="Brainstorming"
+                                className="img-fluid"
+                                style={{ width: '100%', height: 'auto', border: '2px solid #000', borderRadius: '9px' }}
+                            />
+                        </Link>
+                        {projectToDisplay.fontDesc.map((fontDesc, index) => (
+                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
                         ))}
                     </div>
                 </div>
                 <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Mockup</h3>
-                    <Link to={`/projects/${projectToDisplay.id}`}>
-                        <img
-                            src={projectToDisplay.bwMockUp}
-                            alt="Brainstorming"
-                            className="img-fluid"
-                            style={{ width: '80%', height: 'auto' }}
-                        />
-                    </Link>
+                    <div className='col-md-8 offset-md-2 text-center'>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
+                        <Link to={`/projects/${projectToDisplay.id}`}>
+                            <img
+                                src={projectToDisplay.finalMocup}
+                                alt="Brainstorming"
+                                className="img-fluid"
+                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                            />
+                        </Link>
+                        {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
+                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
+                        ))}
+                    </div>
                 </div>
-                <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
-                    <Link to={`/projects/${projectToDisplay.id}`}>
-                        <img
-                            src={projectToDisplay.colorPallete}
-                            alt="Brainstorming"
-                            className="img-fluid"
-                            style={{ width: '80%', height: 'auto' }}
-                        />
-                    </Link>
-                    {projectToDisplay.colorPalleteDes.map((colorPalleteDes, index) => (
-                        <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
-                    ))}
+                <div className="col-md-12 d-flex justify-content-center whiteBg" style={{ backgroundColor: '#fff' }}>
+                    <div className="col-md-8">
+                        <div className="text-center">
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{ marginBottom: '30px' }}>
+                            {projectToDisplay.features.map((feature, index) => (
+                                <div key={index} className="bg-A65151 p-3 rounded mb-3" style={{ backgroundColor: '#A65151', width: '200px' }}>
+                                    <p style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Fonts Considered</h3>
-                    <Link to={`/projects/${projectToDisplay.id}`}>
-                        <img
-                            src={projectToDisplay.font}
-                            alt="Brainstorming"
-                            className="img-fluid"
-                            style={{ width: '80%', height: 'auto' }}
-                        />
-                    </Link>
-                    {projectToDisplay.fontDesc.map((fontDesc, index) => (
-                        <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
-                    ))}
+                <div className="col-md-12 d-flex justify-content-center" >
+                    <div className="col-md-8">
+                        <div className="text-center">
+                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
+                            <div className="d-flex flex-wrap justify-content-center">
+                                {projectToDisplay.Software.map((Software, index) => (
+                                    <Link key={index} to={`/projects/${projectToDisplay.id}`} style={{ margin: '10px' }}>
+                                        <img
+                                            src={Software}
+                                            alt={`sketch-${index}`}
+                                            className="img-fluid"
+                                            style={{ width: 'auto', height: '100px', marginBottom: '30px' }}
+                                        />
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-12 text-center mt-4">
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
-                    <Link to={`/projects/${projectToDisplay.id}`}>
-                        <img
-                            src={projectToDisplay.finalMocup}
-                            alt="Brainstorming"
-                            className="img-fluid"
-                            style={{ width: '80%', height: 'auto' }}
-                        />
-                    </Link>
-                    {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
-                        <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
-                    ))}
+                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff' }}>
+                    <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center'>
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
-                </div>
-                <div className='col-md-12 d-flex justify-content-center'>
+                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff' }}>
                     <video
                         controls
                         style={{
@@ -162,7 +216,7 @@ const SingleProject = ({ projects }) => {
                         <source src={projectToDisplay.video} type="video/mp4" />
                     </video>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center'>
+                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff', paddingBottom: '30px' }}>
                     {projectToDisplay.isCodeProject && (
                         <div className='codeIcons'>
                             <h3>
@@ -204,63 +258,36 @@ const SingleProject = ({ projects }) => {
                         </div>
                     )}
                 </div>
-
-
             </div>
-            <div className="row">
-                <div className="col-md-6 d-flex justify-content-center">
-                    <div className="col-md-10">
-                        <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
-                        </div>
-                        <div className="d-flex flex-column align-items-center">
-                            {projectToDisplay.features.map((feature, index) => (
-                                <p key={index} style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
-                            ))}
-                        </div>
-                    </div>
+            <div className="col-md-12">
+                <div className="col-md-12" style={{ textAlign: 'right' }}>
+                    {projectToDisplay.dt.map((dt, index) => (
+                        <p key={index} className="fC" style={{ fontSize: '30px', color: '#fff', paddingTop: '30px', marginRight: '30px' }}>Project Date: {dt}</p>
+                    ))}
                 </div>
-                <div className="col-md-6 d-flex justify-content-center">
-                    <div className="col-md-10">
-                        <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
-                        </div>
-                        <div className="d-flex flex-column align-items-center">
-                            {projectToDisplay.Software.map((Software, index) => (
-                                <p key={index} style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0px' }}>{Software}</p>
-
-                            ))}
-                        </div>
-                    </div>
+                <div className="col-md-12" style={{ textAlign: 'right' }}>
+                    <Link to={`/Projects`} className="align-self-start" style={{
+                        marginTop: '10px',
+                        backgroundColor: isHighlighted ? '#fff' : '#A65151', // Separate background color condition
+                        borderRadius: '30px',
+                        color: isHighlighted ? '#A65151' : '#fff', // Separate text color condition
+                        display: 'inline-block',
+                        border: '1px solid white',
+                        padding: '10px 20px',
+                        textDecoration: 'none',
+                        marginBottom: '100px',
+                        marginRight: '30px',
+                        transform: isHighlighted ? 'scale(1.1)' : 'scale(1)',
+                        transition: 'transform 0.2s ease-in-out',
+                    }}
+                        onMouseEnter={handleHighlightEnter} // Add onMouseEnter handler
+                        onMouseLeave={handleHighlightLeave} // Add onMouseLeave handler
+                    >
+                        See More Projects
+                    </Link>
                 </div>
-            </div>
-
-
-            <div>
-                <h3>Date of Project</h3><br />
-                {projectToDisplay.dt.map((dt, index) => (
-                    <p key={index} style={{ fontSize: '24px' }}>{dt}</p>
-                ))}
-                <Link to={`/Projects`} className="align-self-start">
-                    <FontAwesomeIcon
-                        style={{
-                            padding: '10px',
-                            backgroundColor: 'transparent',
-                            fontSize: '1.5rem',
-                            color: 'black',
-                            cursor: 'pointer',
-                            outline: 'none',
-                            borderRadius: '5px',
-                            border: '1px solid white',
-                        }}
-                        icon={faArrowLeft}
-                    />
-                </Link>
             </div>
         </div>
-
-
-
     );
 
 

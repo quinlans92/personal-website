@@ -31,6 +31,14 @@ body {
       #A65151 100%);
 }
 
+.pinkCont {
+  background-color: #A65151;
+}
+
+.whiteBg {
+  background-color: #fff;
+}
+
 .navbar-container::before {
   content: "";
   position: absolute;
@@ -44,9 +52,21 @@ body {
       #A65151 100%);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=IBM+Plex+Mono:ital,wght@0,700;1,500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
+
+.fC {
+  font-family: 'Handjet', cursive;
+}
+
+.objectiveText {
+  font-family: 'IBM Plex Mono', monospace;
+}
 
 .designer {
   font-family: 'Oswald', sans-serif;
@@ -58,7 +78,6 @@ body {
   color: #fff;
   padding-top: 30px;
 }
-
 
 
 .navbar-container {
