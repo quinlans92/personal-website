@@ -11,6 +11,9 @@ import backGround from '../images/background.jpg'
 const SingleProject = ({ projects }) => {
     const urlParameters = useParams();
 
+    const [showBrainstorming, setShowBrainstorming] = useState(true); // Initial state
+
+
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -65,14 +68,25 @@ const SingleProject = ({ projects }) => {
                 </div>
                 <div className="col-md-12 text-center mt-4">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Brainstorming</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>
+                            {projectToDisplay.projectType === 'Brainstorming' ? 'Brainstorming' : 'User Flow Diagram'}
+                        </h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
-                            <img
-                                src={projectToDisplay.brainstorming}
-                                alt="Brainstorming"
-                                className="img-fluid"
-                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px', marginBottom: '30px' }}
-                            />
+                            {projectToDisplay.projectType === 'Brainstorming' ? (
+                                <img
+                                    src={projectToDisplay.brainstorming}
+                                    alt="Brainstorming"
+                                    className="img-fluid"
+                                    style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px', marginBottom: '30px' }}
+                                />
+                            ) : (
+                                <img
+                                    src={projectToDisplay.userFlowChart}
+                                    alt="User Flow Diagram"
+                                    className="img-fluid"
+                                    style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px', marginBottom: '30px' }}
+                                />
+                            )}
                         </Link>
                     </div>
                 </div>
@@ -88,21 +102,15 @@ const SingleProject = ({ projects }) => {
                         ))}
                     </div>
                 </div>
-
                 <div className="col-md-12 text-center mt-4">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Early Sketch</h3>
-                        {projectToDisplay.sketch.map((sketchImage, index) => (
-                            <div key={index} style={{ marginBottom: '20px' }}>
-                                <Link to={`/projects/${projectToDisplay.id}`}>
-                                    <img
-                                        src={sketchImage}
-                                        alt={`sketch-${index}`}
-                                        className="img-fluid"
-                                        style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
-                                    />
-                                </Link>
-                            </div>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Early Sketch/MockUp</h3>
+                        {projectToDisplay.sketch.map((imagePath, index) => (
+                            <img key={index}
+                                className="img-fluid"
+                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                                src={imagePath}
+                                alt={`Early Sketch/MockUp ${index + 1}`} />
                         ))}
                     </div>
                 </div>
@@ -137,14 +145,31 @@ const SingleProject = ({ projects }) => {
                 </div>
                 <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Fonts</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>
+                            {projectToDisplay.titleDesign === 'Fonts' ? 'Fonts' : 'Logo'}
+                        </h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
-                            <img
-                                src={projectToDisplay.font}
-                                alt="Brainstorming"
-                                className="img-fluid"
-                                style={{ width: '100%', height: 'auto', border: '2px solid #000', borderRadius: '9px' }}
-                            />
+                            {projectToDisplay.titleDesign === 'Fonts' ? (
+                                <img
+                                    src={projectToDisplay.font}
+                                    alt="Brainstorming"
+                                    className="img-fluid"
+                                    style={{ width: '100%', height: 'auto', border: '2px solid #000', borderRadius: '9px' }}
+                                />
+                            ) : (
+                                <div>
+                                    {projectToDisplay.Logo.map((logo, index) => (
+                                        <div key={index}>
+                                            <img
+                                                src={logo}
+                                                alt={`Logo ${index + 1}`}
+                                                className="img-fluid"
+                                                style={{ backgroundColor: '#3C4040', width: '80%', height: 'auto', border: '2px solid #000', borderRadius: '9px', marginBottom: '10px' }}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </Link>
                         {projectToDisplay.fontDesc.map((fontDesc, index) => (
                             <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
@@ -154,14 +179,13 @@ const SingleProject = ({ projects }) => {
                 <div className="col-md-12 text-center mt-4">
                     <div className='col-md-8 offset-md-2 text-center'>
                         <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
-                        <Link to={`/projects/${projectToDisplay.id}`}>
-                            <img
-                                src={projectToDisplay.finalMocup}
-                                alt="Brainstorming"
+                        {projectToDisplay.finalMocup.map((imagePath, index) => (
+                            <img key={index}
                                 className="img-fluid"
-                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
-                            />
-                        </Link>
+                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                                src={imagePath}
+                                alt={`Mockup ${index + 1}`} />
+                        ))}
                         {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
                             <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
                         ))}
