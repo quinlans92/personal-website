@@ -31,7 +31,7 @@ const SingleProject = ({ projects }) => {
     const handleHighlightLeave = () => {
         setIsHighlighted(false);
     };
-    const textColor = isHovered ? '#A65151' : '#000';
+    const textColor = isHovered ? '#fff' : '#000';
 
     const [isHighlighted, setIsHighlighted] = useState(false); // Initialize isHighlighted state
 
@@ -114,7 +114,7 @@ const SingleProject = ({ projects }) => {
                         ))}
                     </div>
                 </div>
-                <div className="col-md-12 text-center mt-4 whiteBg">
+                {/* <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
                         <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Mockup</h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
@@ -126,26 +126,26 @@ const SingleProject = ({ projects }) => {
                             />
                         </Link>
                     </div>
-                </div>
-                <div className="col-md-12 text-center mt-4">
+                </div> */}
+                <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
                             <img
                                 src={projectToDisplay.colorPallete}
                                 alt="Brainstorming"
                                 className="img-fluid"
-                                style={{ width: '100%', height: 'auto' }}
+                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
                             />
                         </Link>
                         {projectToDisplay.colorPalleteDes.map((colorPalleteDes, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
                         ))}
                     </div>
                 </div>
-                <div className="col-md-12 text-center mt-4 whiteBg">
+                <div className="col-md-12 text-center mt-4">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>
+                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>
                             {projectToDisplay.titleDesign === 'Fonts' ? 'Fonts' : 'Logo'}
                         </h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
@@ -172,43 +172,43 @@ const SingleProject = ({ projects }) => {
                             )}
                         </Link>
                         {projectToDisplay.fontDesc.map((fontDesc, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
                         ))}
                     </div>
                 </div>
-                <div className="col-md-12 text-center mt-4">
+                <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
                         {projectToDisplay.finalMocup.map((imagePath, index) => (
                             <img key={index}
                                 className="img-fluid"
-                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
                                 src={imagePath}
                                 alt={`Mockup ${index + 1}`} />
                         ))}
                         {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
                         ))}
                     </div>
                 </div>
-                <div className="col-md-12 d-flex justify-content-center whiteBg" style={{ backgroundColor: '#fff' }}>
+                <div className="col-md-12 d-flex justify-content-center ">
                     <div className="col-md-8">
                         <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{ marginBottom: '30px' }}>
                             {projectToDisplay.features.map((feature, index) => (
-                                <div key={index} className="bg-A65151 p-3 rounded mb-3" style={{ backgroundColor: '#A65151', width: '200px' }}>
-                                    <p style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
+                                <div key={index} className="bg-A65151 p-3 rounded mb-3" style={{ backgroundColor: '#fff', width: '200px' }}>
+                                    <p style={{ color: '#A65151', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className="col-md-12 d-flex justify-content-center" >
+                <div className="col-md-12 d-flex justify-content-center whiteBg" >
                     <div className="col-md-8">
                         <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
                             <div className="d-flex flex-wrap justify-content-center">
                                 {projectToDisplay.Software.map((Software, index) => (
                                     <Link key={index} to={`/projects/${projectToDisplay.id}`} style={{ margin: '10px' }}>
@@ -224,10 +224,10 @@ const SingleProject = ({ projects }) => {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff' }}>
-                    <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
+                <div className='col-md-12 d-flex justify-content-center'>
+                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff' }}>
+                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#A65151' }}>
                     <video
                         controls
                         style={{
@@ -240,12 +240,12 @@ const SingleProject = ({ projects }) => {
                         <source src={projectToDisplay.video} type="video/mp4" />
                     </video>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#fff', paddingBottom: '30px' }}>
+                <div className='col-md-12 d-flex justify-content-center whiteBg' style={{ backgroundColor: '#A65151', paddingBottom: '30px' }}>
                     {projectToDisplay.isCodeProject && (
                         <div className='codeIcons'>
                             <h3>
                                 <a
-                                    href="https://github.com/quinlans92/kidsWeatherApp_bySamantha"
+                                    href={projectToDisplay.gitHubLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{

@@ -10,7 +10,7 @@ import html from '../images/html.png';
 import js from '../images/javascript.png';
 import figma from '../images/figma.png';
 import react from '../images/react.png';
-import vs from '../images/vsCode.png';
+import vs from '../images/visualStudio.png';
 import p5 from '../images/p5.png';
 import flower from '../images/flower.png';
 import camera from '../images/camera.png';
@@ -105,6 +105,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={html}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 1"
                                 onMouseEnter={handleImageOneHover}
                                 onMouseLeave={handleImageOneLeave}
@@ -114,6 +115,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={css}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -123,6 +125,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={js}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -132,6 +135,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={p5}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -141,6 +145,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={react}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -150,6 +155,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={dw}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -159,6 +165,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={vs}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -168,6 +175,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={ps}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -177,6 +185,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={ai}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -186,6 +195,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={ae}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -195,6 +205,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={lr}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
@@ -204,6 +215,7 @@ const About = () => {
                             <img
                                 className="skill-image"
                                 src={figma}
+                                style={{ marginBottom: '30px' }}
                                 alt="Image 2"
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}

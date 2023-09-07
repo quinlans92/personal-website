@@ -36,7 +36,11 @@ import aboutMockUp from './images/aboutMockUp.png';
 import userFlowChart from './images/UserFlowChart.png';
 import logo from './images/logo.png';
 import logoSketch from './images/samLogoSketch.png';
-
+import colorPalleteRecipe from './images/colorPalleteRecipe.png';
+import fotorSw from './images/fotorSw.png';
+import GithubSw from './images/GithubSw.png';
+import FigmaSw from './images/FigmaSw.png';
+import vsCode from './images/vsCode.png';
 
 function importAll(r) {
   let videos = {};
@@ -97,6 +101,7 @@ const projects = [
     video: videos['AppDemo.mp4'], // Dynamically import video
     features: ["p5.js", "Real Time Weather Information", "JSON data", "Text to Speech", "Voice Recognition", "Geo-Location accuracy"],
     Software: [aiSw, opSw, owSw],
+    gitHubLink: "https://github.com/quinlans92/kidsWeatherApp_bySamantha",
     isCodeProject: true, // Not a code project
     projectType: 'Brainstorming',
     titleDesign: 'Fonts',
@@ -109,20 +114,22 @@ const projects = [
     deviceImg: RecipeDevices,
     sketch: [appSketch, singleRecipeSketch, editSketch, newRecipeSketch],
     bwMockUp: "",
-    colorPallete: colorPalWeather,
-    colorPalleteDes: ['The rainbow color pallete theme was inspired by my research of successful kids apps that utilize vibrant colors, I have chosen a joyful range of rainbow hues to create an engaging and imaginative environment. By embracing the trend of colorful visuals in childrens apps, my palette aims to capture young users attention, facilitate easy navigation, and ensure a delightful and immersive user experience.', 'I decided to go with color pallete number two because I had envisioned from the begining how I would use all the colors from the rainbow for each letter of the title/logo.'],
+    colorPallete: colorPalleteRecipe,
+    colorPalleteDes: ['I chose color palette number one for my React recipe app for a few strategic reasons. The dark gray (#3c4040) provides a neutral and elegant background, allowing the vibrant recipe images and content to stand out. From my research I found that multiple food and recipe apps use green in their color pallete and I followed suit. As well as being backed as a popular choice by research, the green (#257C2B) I went with was also intended to represent the idea of freshness and natural ingredients in the culinary world. Meanwhile, the soft pink (#F56BB2) adds a playful touch and a touch personality to the design. The combination of this color pallete ensures readability and a modern, polished look, creating a visually pleasing and user-friendly experience. This color palette not only enhances the aesthetics of my app but also showcases my attention to detail.'],
     userFlowChart: userFlowChart,
     Logo: [logoSketch, logo],
     finalMocup: [appMockUp, singleRecipeMockUp, editMockUp, newRecipeMockUp, aboutMockUp],
-    finalMockUpDesc: ['This was my final mockup with color, character design and features complete, this served as the final blueprint for bringing my App to life. I made this mockup in illustrator so that I could later export the character, clothes and title to OpenProcessing.', 'With the design phase now concluded, I was ready to translate my creative vision into a fully interactive app, aligning seamlessly with the projects designated objectives. Using p5.js framework, I embraced the exciting challenge of transforming my static designs into a dynamic, user-friendly experience. This phase demanded rapid upskilling as I ventured into uncharted territory, integrating advanced features such as geolocation services, voice recognition, and weather APIs. I welcome you to watch the demo of the App fully finished and invite you to view my code and explore the App through the below video and link.'],
+    finalMockUpDesc: ['This marks the end of my design journey – the final mock-up created in Figma. I couldnt be happier with how it all came together. The harmony between my logo and chosen color scheme has lead to a distinctive and visually appealing identity to the app. The careful arrangement of features, as outlined in my user flow diagram, seamlessly translates to this mock-up. With this final mockup ready, I excitedly dived into my first ever React coding project within Visual Studio Code, consistently pushing updates to my GitHub repo as I worked on my project seeing it through to completion.'],
     fontDesc: ['To kick off my logo creation journey, I started with a sharpie. It helped me quickly sketch out the basic logo idea, just to get a feel for how it might look. Once I had a clear picture in my mind, I took to illustrator to create a digital version. In Illustrator, I fine-tuned all the lines and shapes, making it look proffesional. To keep things consistent with my initial sketch, I found a font that had a similar appearance. Then came the fun part – manipulating that font to match the original concept. Finally, I added in those eye-popping colors from my chosen palette.'],
-    ProblemsToSolve: ['DATA MANAGEMENT: Managing and presenting data effectively, ensuring that recipes are well-structured and user-friendly.', 'DATA OPERATIONS: Creating, updating, editing, and deleting recipes with a focus on providing a seamless user experience', 'DATA DETAILS: Designing a clear and user-friendly layout for recipe information, including ingredients and steps.', 'UI DESIGN AND INTERACTION: Creating an engaging and intuitive interface that makes the app enjoyable to use.', 'CROSS PLATFORM COMPATIBILITY: Ensuring the app functions well on different devices and platforms.'], objective: [' Create Recipe App where it is possible to create, read, update, delete and edit a recipe. The recipe list should allow for logging of favourite recipies. The details should, at a minimun,include the recipe title, a list of ingredients and the method steps '],
+    ProblemsToSolve: ['DATA MANAGEMENT: Managing and presenting data effectively, ensuring that recipes are well-structured and user-friendly.', 'DATA OPERATIONS: Creating, updating, editing, and deleting recipes with a focus on providing a seamless user experience', 'DATA DETAILS: Designing a clear and user-friendly layout for recipe information, including ingredients and steps.', 'UI DESIGN AND INTERACTION: Creating an engaging and intuitive interface that makes the app enjoyable to use.', 'CROSS PLATFORM COMPATIBILITY: Ensuring the app functions well on different devices and platforms.'],
+    objective: [' Create a Recipe App where it is possible to Create, Read, Update, Delete and Edit a recipe. The recipe list should allow for logging of favourite recipies. The details should, at a minimun,include the recipe title, a list of ingredients and the method steps '],
     category: ["UI Design, ", "Web Development, ", "App Development"],
     Project: " React Recipe App",
     image: ReactRecipePic,
     video: videos['ReactRecipe.mp4'], // Dynamically import video
     features: ["React", "Bootstrap", "Fontawesome", "AI images"],
-    Software: [aiSw, opSw, owSw],
+    Software: [fotorSw, GithubSw, FigmaSw, vsCode],
+    gitHubLink: "https://github.com/quinlans92/samantha_k00263421_crude_recipe_app",
     isCodeProject: true, // Not a code project
     projectType: 'User Flow Diagram',
     titleDesign: 'Logo',
