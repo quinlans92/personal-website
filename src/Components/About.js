@@ -98,7 +98,7 @@ const About = () => {
                 </div>
                 <div className='col-sm-12 skills-container'>
                     <div className='heading' style={{ textAlign: 'center' }}>
-                        <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#A65151' }}>Skills and Software</h2>
+                        <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#A65151', marginBottom: '50px' }}>Skills and Software</h2>
                     </div>
                     <div className='row' style={{ justifyContent: 'center', maxWidth: '900px', margin: '0 auto' }}>
                         <div className="col-md-3 col-sm-6 col-6">

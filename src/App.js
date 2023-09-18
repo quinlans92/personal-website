@@ -41,6 +41,23 @@ import fotorSw from './images/fotorSw.png';
 import GithubSw from './images/GithubSw.png';
 import FigmaSw from './images/FigmaSw.png';
 import vsCode from './images/vsCode.png';
+import individualLanding from './images/individualLanding.png';
+import tlHomeSketch from './images/tlHomeSketch.png';
+import landingMenuSketch from './images/landingMenuSketch.png';
+import forHerSketch from './images/forHerSketch.png';
+import cartSketch from './images/cartSketch.png';
+import sketchCart from './images/sketchCart.png';
+import motionMockUpCp from './images/motionMockUpCp.png';
+import MotionMockUpDevice from './images/MotionMockUpDevice.png';
+import MotionFonts from './images/MotionFonts.png';
+import menuMm from './images/menuMm.png';
+import menuBgMm from './images/menuBgMm.png';
+import forHimMm from './images/forHimMm.png';
+import forHerMm from './images/forHerMm.png';
+import cartMm from './images/cartMm.png';
+import cartSummaryMm from './images/cartSummaryMm.png';
+import aeSw from './images/aeSw.png';
+import psSw from './images/psSw.png';
 
 function importAll(r) {
   let videos = {};
@@ -57,24 +74,26 @@ const projects = [
   {
     id: 1,
     dt: ["April 2022"],
-    deviceImg: weatherAppDevices,
-    sketch: [weatherSkecth, weatherSkecthTwo, bwMockUp],
+    deviceImg: MotionMockUpDevice,
+    sketch: [individualLanding, tlHomeSketch, landingMenuSketch, forHerSketch, cartSketch, sketchCart],
     bwMockUp: "",
-    colorPallete: colorPalWeather,
-    colorPalleteDes: ['The rainbow color pallete theme was inspired by my research of successful kids apps that utilize vibrant colors, I have chosen a joyful range of rainbow hues to create an engaging and imaginative environment. By embracing the trend of colorful visuals in childrens apps, my palette aims to capture young users attention, facilitate easy navigation, and ensure a delightful and immersive user experience.', 'I decided to go with color pallete number two because I had envisioned from the begining how I would use all the colors from the rainbow for each letter of the title/logo.', ''],
+    colorPallete: motionMockUpCp,
+    colorPalleteDes: ['We chose a color palette of black, white and grey because our research findings recognized a high precentage of leading fashion websites adopted this same minimalistic designs approach. This sleek and clean aesthetic not only resonates with contemporary trends but also enhances the user experience by creating a visually appealing and uncluttered environment. These neutral tones allow the imagery and content to take center stage, ensuring a seamless and engaging browsing experience for users.'],
     brainstorming: brainstorm,
-    font: fontKidApp,
-    finalMocup: [WeatherAppPic],
-    finalMockUpDesc: ['This was my final mockup with color, character design and features complete, this served as the final blueprint for bringing my App to life. I made this mockup in illustrator so that I could later export the character, clothes and title to OpenProcessing.'],
-    fontDesc: ['I selected these fun and bubbly fonts to infuse my project with a sense of playfulness and charm. These font selections were made with careful consideration, ensuring that my design had youthful energy and a lighthearted atmosphere', 'After incorporating my chosen color pallete to font number four,I saw the text come alive, capturing the very essence of joy and creativity that I had envisioned for my project. With this alignment, I confidently finalized my font choice for this App.'],
-    ProblemsToSolve: ['Integration with APIs: I was required to find and integrate suitable APIs to fetch real-time weather data reliably and accurately.', 'Data Processing and Presentation: I was required to process the fetched data and present data in a user-friendly and visually appealing manner', 'Voice Interaction: Implementing speech recognition required me to learn new skills and solve challenges related to integrating the technology', 'UI Design and Interaction:I was required to design a fun UI that was very intuitive and kid friendly and come up with some engaging features to enhance the experience', 'Geo Location Accuracy: I was required to learn a new skill and integrating it smoothly into the app addressing challenges as they arise.'],
-    objective: ["Working as a member of a team I was required to research, previsualise and produce a motion graphics mockup of an application, based on a client’s brief. The mockup must include the core functionality of the application and show navigation and interactivity of its different sections and menus and any popup windows."],
+    font: MotionFonts,
+    finalMocup: [ThreadLairPic, menuMm, menuBgMm, forHimMm, forHerMm, cartMm, cartSummaryMm],
+    finalMockUpDesc: ["These were our final mockups, ready to be taken into AfterEffects to be animated into a motion mockup. My contributions to the overall process of this team effort began early in the process when I set up our project management system using Trello, streamlining our workflow. I contributed to every opportunity and was happy to go above and beyond for our team's success. I created the ForHer page digital mockup, collecting and resizing images while adapting dimensions for the website and I helped design the slide in add to cart pages. Furthermore, my motion graphic skills came into play as I animated different elements of the mockups. I contributed to the animating of the For Him page, hearts, add-to-cart slide-in images, the home page, and the cart.",
+      "Throughout the design process, I gleaned invaluable insights.I discovered the importance of striking a balance between creativity and practicality, ensuring that our design choices adhered to fundamental principles.Effective teamwork, I realized, hinges on clear communication and frequent review stages, especially in the project's early phases. Collaborating with like-minded and creative teammates broadened my horizons, introducing me to new techniques and design methods that I have since incorporated into my personal projects.",
+      "In hindsight, I acknowledge the need for greater advocacy for my ideas and a more proactive approach to time management. I recognize the value of allocating sufficient time for unforeseen challenges rather than overcommitting to familiar tasks."],
+    fontDesc: ["We ultimately chose Font Number 3, Fahkwang, for its clean and modern look, which resonated with our design vision. Our decision was influenced by Font Number 2, where we particularly admired the capital letter effects. We decided to incorporate this distinct feature into Fahkwang to create a harmonious and unique font that aligned perfectly with our concept. From the outset of our design sketches, we established the emphasis on the letters 'T' and 'L', a choice that added a distinctive touch to our typography. The subtle alterations made to the Fahkwang font brought it to life in the exact way we had envisioned, enhancing the overall aesthetic of our project."],
+    ProblemsToSolve: ["TEAM COORDINATION: Effectively coordinating communication and time management", 'TEAM DYNAMICS: Identify team members weaknesses and address them with stratagies, identify team members strenghts and utilize them.', "VISUAL PLANNING: Develop a clear and engaging concept for the motion mockup that effectively communicates the website's purpose, user experience, and branding", "MOTION GRAPHICS: Working in Adobe After Effects and ensuring smooth transitions and interactions that will imitate the user experience of a clothing website", "DESIGN CONSISTENCY: Working on a team and ensuring all team members have consistent design with each other", "FEEDBACK AND ITERATIONS: Team members being open to feedback and prepared to iterate their work accordingly"],
+    objective: ["Working as a member of a team I was required to research, previsualise and produce a motion graphics mockup of a clothing website, based on a client’s brief. The mockup must include the core functionality of the application and show navigation and interactivity of its different sections and menus and any popup windows."],
     category: ["UI Design, ", "Motion Graphics"],
     Project: "Motion Mock Up",
     image: ThreadLairPic,
     video: videos['ThreadLair.mp4'],
-    features: ["p5.js", "Use of APIs to fetch real time weather information", "JSON data", "text to speech", "voice recognition", "graphics"],
-    Software: [aiSw, opSw, owSw],
+    features: ["Digital Mockup Creation", "graphics", "Motion Graphics", "Teamwork", "Project Management"],
+    Software: [aeSw, psSw],
     isCodeProject: false, // Not a code project
     projectType: 'Brainstorming',
     titleDesign: 'Fonts',
