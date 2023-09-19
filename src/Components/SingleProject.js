@@ -90,6 +90,37 @@ const SingleProject = ({ projects }) => {
                         </Link>
                     </div>
                 </div>
+                {projectToDisplay.hasCreativeBrief && (
+                    <div className="col-md-12 text-center mt-4 whiteBg">
+                        <div className='col-md-8 offset-md-2 text-center'>
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Our Team's Creative Brief</h3>
+                            {projectToDisplay.creativeBrief.map((imagePath, index) => (
+                                <img
+                                    key={index}
+                                    className="img-fluid"
+                                    style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
+                                    src={imagePath}
+                                    alt={`Our Team's Creative Brief ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {projectToDisplay.hasProjectMap && (
+                    <div className="col-md-12 text-center mt-4 ">
+                        <div className='col-md-8 offset-md-2 text-center'>
+                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Our Team's Project Map</h3>
+                            <Link to={`/projects/${projectToDisplay.id}`}>
+                                <img
+                                    src={projectToDisplay.projectMap}
+                                    alt="Brainstorming"
+                                    style={{ width: '80%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px', marginBottom: '30px' }}
+                                />
+                            </Link>
+                        </div>
+                    </div>
+                )}
+
                 <div className='d-flex justify-content-center whiteBg' >
                     <div className='col-md-8' style={{ marginBottom: '30px' }}>
                         <div className='text-center'>

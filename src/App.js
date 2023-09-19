@@ -58,6 +58,12 @@ import cartMm from './images/cartMm.png';
 import cartSummaryMm from './images/cartSummaryMm.png';
 import aeSw from './images/aeSw.png';
 import psSw from './images/psSw.png';
+import MotionMuBrainstorming from './images/MotionMuBrainstorming.jpg';
+import creativeBrief1 from './images/creativeBrief1.jpg';
+import creativeBrief2 from './images/creativeBrief2.jpg';
+import creativeBrief3 from './images/creativeBrief3.jpg';
+import projectMap from './images/projectMap.png';
+
 
 function importAll(r) {
   let videos = {};
@@ -79,7 +85,9 @@ const projects = [
     bwMockUp: "",
     colorPallete: motionMockUpCp,
     colorPalleteDes: ['We chose a color palette of black, white and grey because our research findings recognized a high precentage of leading fashion websites adopted this same minimalistic designs approach. This sleek and clean aesthetic not only resonates with contemporary trends but also enhances the user experience by creating a visually appealing and uncluttered environment. These neutral tones allow the imagery and content to take center stage, ensuring a seamless and engaging browsing experience for users.'],
-    brainstorming: brainstorm,
+    brainstorming: MotionMuBrainstorming,
+    creativeBrief: [creativeBrief1, creativeBrief2, creativeBrief3],
+    projectMap: projectMap,
     font: MotionFonts,
     finalMocup: [ThreadLairPic, menuMm, menuBgMm, forHimMm, forHerMm, cartMm, cartSummaryMm],
     finalMockUpDesc: ["These were our final mockups, ready to be taken into AfterEffects to be animated into a motion mockup. My contributions to the overall process of this team effort began early in the process when I set up our project management system using Trello, streamlining our workflow. I contributed to every opportunity and was happy to go above and beyond for our team's success. I created the ForHer page digital mockup, collecting and resizing images while adapting dimensions for the website and I helped design the slide in add to cart pages. Furthermore, my motion graphic skills came into play as I animated different elements of the mockups. I contributed to the animating of the For Him page, hearts, add-to-cart slide-in images, the home page, and the cart.",
@@ -95,6 +103,8 @@ const projects = [
     features: ["Digital Mockup Creation", "graphics", "Motion Graphics", "Teamwork", "Project Management"],
     Software: [aeSw, psSw],
     isCodeProject: false, // Not a code project
+    hasCreativeBrief: true,
+    hasProjectMap: true,
     projectType: 'Brainstorming',
     titleDesign: 'Fonts',
 
@@ -121,6 +131,8 @@ const projects = [
     features: ["p5.js", "Real Time Weather Information", "JSON data", "Text to Speech", "Voice Recognition", "Geo-Location accuracy"],
     Software: [aiSw, opSw, owSw],
     gitHubLink: "https://github.com/quinlans92/kidsWeatherApp_bySamantha",
+    hasCreativeBrief: false,
+    hasProjectMap: false,
     isCodeProject: true, // Not a code project
     projectType: 'Brainstorming',
     titleDesign: 'Fonts',
@@ -149,6 +161,8 @@ const projects = [
     features: ["React", "Bootstrap", "Fontawesome", "AI images"],
     Software: [fotorSw, GithubSw, FigmaSw, vsCode],
     gitHubLink: "https://github.com/quinlans92/samantha_k00263421_crude_recipe_app",
+    hasCreativeBrief: false,
+    hasProjectMap: false,
     isCodeProject: true, // Not a code project
     projectType: 'User Flow Diagram',
     titleDesign: 'Logo',
