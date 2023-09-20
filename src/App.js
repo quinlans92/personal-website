@@ -63,6 +63,21 @@ import creativeBrief1 from './images/creativeBrief1.jpg';
 import creativeBrief2 from './images/creativeBrief2.jpg';
 import creativeBrief3 from './images/creativeBrief3.jpg';
 import projectMap from './images/projectMap.png';
+import infoGraphic from './images/infoGraphic.jpg';
+import infoTitle from './images/infoTitle.png';
+import SouthParkBrainstorming from './images/SouthParkBrainstorming.jpg';
+import roadMap from './images/roadMap.png';
+import writersRoom from './images/writersRoom.png';
+import animationTeam from './images/animationTeam.png';
+import avoidingJudge from './images/avoidingJudge.png';
+import soundBooth from './images/soundBooth.png';
+import editing from './images/editing.png';
+import dayToAir from './images/dayToAir.png';
+import Complete from './images/Complete.png';
+import Delivery from './images/Delivery.png';
+import cartmanColorPalette from './images/cartmanColorPalette.png';
+
+
 
 
 function importAll(r) {
@@ -166,6 +181,35 @@ const projects = [
     isCodeProject: true, // Not a code project
     projectType: 'User Flow Diagram',
     titleDesign: 'Logo',
+
+  },
+  {
+    id: 4,
+    dt: ["Feb 2022"],
+    deviceImg: infoTitle,
+    sketch: [roadMap, writersRoom, animationTeam, avoidingJudge, soundBooth, editing, dayToAir, Complete, Delivery],
+    bwMockUp: "",
+    colorPallete: cartmanColorPalette,
+    brainstorming: SouthParkBrainstorming,
+    colorPalleteDes: ["I intentionally opted for the Cartman color scheme as the primary palette for my infographic on making an episode of a South Park, with the primary objective of enriching the user experience. These vivid shades, drawing inspiration from the iconic character, not only serve as visually captivating elements but also seamlessly resonate with the show's audacious and unconventional theme. By incorporating Cartman's colors, my intention was to instantly immerse the audience in the South Park universe, making the content more relatable and enjoyable to interact with. In the realm of UX design, it is important to construct pleasant and memorable user journey, and this color selection ensures that the audience remains captivated throughout, infusing an added layer of authenticity into the infographic's South Park narrative."],
+    font: fontKidApp,
+    finalMocup: [infoGraphic],
+    finalMockUpDesc: ['This marks the end of my design journey – the final mock-up created in Figma. I couldnt be happier with how it all came together. The harmony between my logo and chosen color scheme has lead to a distinctive and visually appealing identity to the app. The careful arrangement of features, as outlined in my user flow diagram, seamlessly translates to this mock-up. With this final mockup ready, I excitedly dived into my first ever React coding project within Visual Studio Code, consistently pushing updates to my GitHub repo as I worked on my project seeing it through to completion.'],
+    fontDesc: ['To kick off my logo creation journey, I started with a sharpie. It helped me quickly sketch out the basic logo idea, just to get a feel for how it might look. Once I had a clear picture in my mind, I took to illustrator to create a digital version. In Illustrator, I fine-tuned all the lines and shapes, making it look proffesional. To keep things consistent with my initial sketch, I found a font that had a similar appearance. Then came the fun part – manipulating that font to match the original concept. Finally, I added in those eye-popping colors from my chosen palette.'],
+    ProblemsToSolve: ['DATA COMPLEXITY: Effectively condensing complex data into a clear and concise infographic while maintaining accuracy and relevance.', 'DESIGN CLUTTER: Balancing visual appeal with clarity to avoid overwhelming the viewer with excessive information or graphics.', "DATA ACCUARACY: Maintaining data accuracy and reliability throughout the design process to uphold the infographic's credibility.", 'DATA VISUALISATION: Expertly utilizing charts, graphs, and visual elements to effectively represent complex data.'],
+    objective: ["Create an engaging and informative infographic that effectively communicates complex data. The infographic should employ clear visual storytelling, incorporating compelling graphics, icons, and typography to make the information visually appealing and easily understandable. The primary goal is to convey key insights and promote better understanding of your topic (to be approved by your lecturer) in a visually compelling and accessible manner."],
+    category: ["Infographic, ", "Graphic Design, "],
+    Project: "Infographic - Making an episode of South Park",
+    image: infoGraphic,
+    video: videos['ReactRecipe.mp4'], // Dynamically import video
+    features: ["React", "Bootstrap", "Fontawesome", "AI images"],
+    Software: [fotorSw, GithubSw, FigmaSw, vsCode],
+    gitHubLink: "https://github.com/quinlans92/samantha_k00263421_crude_recipe_app",
+    hasCreativeBrief: false,
+    hasProjectMap: false,
+    isCodeProject: true, // Not a code project
+    projectType: 'Brainstorming',
+    titleDesign: 'Fonts',
 
   }
 

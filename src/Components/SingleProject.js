@@ -124,7 +124,7 @@ const SingleProject = ({ projects }) => {
                 <div className='d-flex justify-content-center whiteBg' >
                     <div className='col-md-8' style={{ marginBottom: '30px' }}>
                         <div className='text-center'>
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Identified Challenges</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Problems To Solve</h3>
                         </div>
                         {projectToDisplay.ProblemsToSolve.map((ProblemsToSolve, index) => (
                             <div key={index} className="bg-A65151 p-3 rounded mb-3 pinkCont">
