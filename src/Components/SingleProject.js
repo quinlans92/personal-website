@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faHome, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
-import backGround from '../images/background.jpg'
 
 
 
 
 const SingleProject = ({ projects }) => {
     const urlParameters = useParams();
-
-    const [showBrainstorming, setShowBrainstorming] = useState(true); // Initial state
-
 
     const [isHovered, setIsHovered] = useState(false);
 
