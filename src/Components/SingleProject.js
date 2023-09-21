@@ -208,20 +208,30 @@ const SingleProject = ({ projects }) => {
                     </div>
                 </div>
                 <div className="col-md-12 text-center mt-4 whiteBg">
-                    <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
-                        {projectToDisplay.finalMocup.map((imagePath, index) => (
-                            <img key={index}
-                                className="img-fluid"
-                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
-                                src={imagePath}
-                                alt={`Mockup ${index + 1}`} />
-                        ))}
+                    <div className='col-md-12 text-center'> {/* Change col-md-8 to col-md-12 */}
+                        {projectToDisplay.graphicsOnlyProject ? (
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Project Outcome</h3>
+                        ) : (
+                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
+                        )}
+
+                        <div className="col-md-12"> {/* Add a new col-md-12 container */}
+                            {projectToDisplay.finalMocup.map((imagePath, index) => (
+                                <img key={index}
+                                    className="img-fluid"
+                                    style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
+                                    src={imagePath}
+                                    alt={`Mockup ${index + 1}`} />
+                            ))}
+                        </div>
+
                         {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{finalMockUpDesc}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{finalMockUpDesc}</p>
                         ))}
                     </div>
                 </div>
+
+
                 <div className="col-md-12 d-flex justify-content-center ">
                     <div className="col-md-8">
                         <div className="text-center">
@@ -255,22 +265,27 @@ const SingleProject = ({ projects }) => {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-12 d-flex justify-content-center'>
-                    <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
-                </div>
-                <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#A65151' }}>
-                    <video
-                        controls
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto',
-                            border: '3px solid black',
-                            borderRadius: '5px',
-                        }}
-                    >
-                        <source src={projectToDisplay.video} type="video/mp4" />
-                    </video>
-                </div>
+                {!projectToDisplay.graphicsOnlyProject && (
+                    <div>
+                        <div className='col-md-12 d-flex justify-content-center'>
+                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
+                        </div>
+                        <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#A65151' }}>
+                            <video
+                                controls
+                                style={{
+                                    maxWidth: '100%',
+                                    height: 'auto',
+                                    border: '3px solid black',
+                                    borderRadius: '5px',
+                                }}
+                            >
+                                <source src={projectToDisplay.video} type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                )}
+
                 <div className='col-md-12 d-flex justify-content-center whiteBg' style={{ backgroundColor: '#A65151', paddingBottom: '30px' }}>
                     {projectToDisplay.isCodeProject && (
                         <div className='codeIcons'>
