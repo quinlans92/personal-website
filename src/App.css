@@ -1,8 +1,17 @@
-* {
+*body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.ui {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
+.opposite-center {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+* body {
   height: 100vh;
   background: linear-gradient(to right,
       white 0%,
@@ -10,6 +19,8 @@ body {
       #A65151 50%,
       #A65151 100%);
 }
+
+
 
 .abt-container {
   padding-top: 30px;
@@ -23,13 +34,21 @@ body {
   background-color: #A65151;
 }
 
+
 .navbar-container {
+  margin-top: 10px;
+
   background: linear-gradient(to right,
       white 0%,
       white 50%,
       #A65151 50%,
       #A65151 100%);
+  border-radius: 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
+
 
 .pinkCont {
   background-color: #A65151;
@@ -39,7 +58,7 @@ body {
   background-color: #fff;
 }
 
-.navbar-container::before {
+/* .navbar-container::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -50,7 +69,7 @@ body {
       white 50%,
       #A65151 50%,
       #A65151 100%);
-}
+} */
 
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=IBM+Plex+Mono:ital,wght@0,700;1,500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
@@ -59,7 +78,7 @@ body {
 
 
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
-
+/* 
 .fC {
   font-family: 'Handjet', cursive;
 }
@@ -71,7 +90,7 @@ body {
 .designer {
   font-family: 'Oswald', sans-serif;
 
-}
+} */
 
 .myS {
   font-family: 'Sacramento', cursive;
@@ -90,10 +109,10 @@ body {
 }
 
 .sidebar {
-  float: left;
+
   position: fixed;
   top: 85%;
-  margin-left: 5px;
+
 }
 
 .bg {

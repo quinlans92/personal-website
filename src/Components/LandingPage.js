@@ -12,7 +12,7 @@ const LandingPage = () => {
     return (
         <div className="container-me">
             <div className='col-sm-12-p'>
-                <p className='designer' style={{ fontSize: '35px', fontWeight: 'bold' }}>Hey, I'm <span style={{ color: '#fff' }}>Samantha</span>,<br />Welcome to my website.</p>
+                <p className='designer' style={{ fontSize: '35px' }}>Hey, I'm <span style={{ color: '#fff' }}>Samantha</span>,<br />Welcome to my website.</p>
             </div>
             <div className="col-sm-12-i">
                 <img className='samImg' src={samQuinlanImage} alt="Sam Quinlan" />
@@ -20,8 +20,8 @@ const LandingPage = () => {
             <div className="row">
                 <div className="col-sm-12">
                     <div className="opposite-center">
-                        <h1 style={{ color: '#A65151' }}>UI</h1>
-                        <h1 style={{ color: '#fff' }}>UX</h1>
+                        <h1 className="ui" style={{ color: '#A65151' }}>UI</h1>
+                        <h1 className="ui" style={{ color: '#fff' }}>UX</h1>
                     </div>
                 </div>
             </div>
