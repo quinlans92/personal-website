@@ -5,7 +5,7 @@ const Projects = ({ projects }) => {
     const [highlightedRecipe, setHighlightedRecipe] = useState(null);
 
     return (
-        <div className="container-fluid projects-container" >
+        <div className="container-fluid projects-container" style={{ backgroundColor: '#c8f7f8' }}>
             <div className="row">
                 {projects.map((item) => (
                     <div
@@ -36,26 +36,26 @@ const Projects = ({ projects }) => {
                                 />
                             </Link>
                             <div className="card-body">
-                                <h3 className="card-title" style={{ color: '#fff', float: 'left' }}>
+                                <h3 className="card-title" style={{ color: '#f28705', float: 'left' }}>
                                     {item.Project}
                                 </h3>
                                 <br />
                                 <br />
-                                <p className="card-title" style={{ color: '#fff', float: 'left' }}>
+                                <p className="card-title" style={{ color: '#c8f7f8', float: 'left' }}>
                                     {item.category}
                                 </p>
                                 <div style={{ clear: 'both' }}></div>
                                 <Link
                                     style={{
-                                        backgroundColor: '#A65151',
-                                        border: '2px solid white',
+                                        backgroundColor: '#025959',
+                                        border: '2px solid #f28705',
                                         borderRadius: '30px',
-                                        color: '#fff',
+                                        color: '#d6d6d6',
                                         display: 'inline-block',
                                         marginTop: '10px', // Add some margin to separate from the title
                                         transform: highlightedRecipe === item.id ? 'scale(1.1)' : 'scale(1)',
-                                        backgroundColor: highlightedRecipe === item.id ? '#fff' : '#A65151',
-                                        color: highlightedRecipe === item.id ? '#A65151' : '#fff',
+                                        backgroundColor: highlightedRecipe === item.id ? '#c8f7f8' : '#025959',
+                                        color: highlightedRecipe === item.id ? '#025959' : '#f28705',
                                         transition: 'transform 0.2s ease-in-out',
                                         padding: '10px 20px',
                                         textDecoration: 'none',

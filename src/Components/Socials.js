@@ -13,32 +13,32 @@ const Socials = () => {
 
     return (
 
-        <div className="container sidebar" style={{ color: '#fff' }}>
+        <div className="container sidebar" style={{ color: '#fff', marginLeft: '10px' }}>
             <div className="socials-sidebar">
                 <a href="https://www.facebook.com">
                     <img className='facebookIcon'
-                        style={{ width: '100px', height: '100px' }}
+                        style={{ width: '70px', height: '70px', marginLeft: '10px' }}
                         src={fbImg}
                         alt="facebook icon"
                     />
                 </a>
                 <a href="https://www.instagram.com">
                     <img className='instagramIcon'
-                        style={{ width: '100px', height: '100px' }}
+                        style={{ width: '70px', height: '70px', marginLeft: '10px' }}
                         src={igImg}
                         alt="insta icon"
                     />
                 </a>
                 <a href="https://www.linkedin.com">
                     <img className='linkedInIcon'
-                        style={{ width: '100px', height: '100px' }}
+                        style={{ width: '70px', height: '70px', marginLeft: '10px' }}
                         src={liImg}
                         alt="linkedIn icon"
                     />
                 </a>
                 <a href="https://www.linkedin.com">
                     <img className='behanceIcon'
-                        style={{ width: '100px', height: '100px' }}
+                        style={{ width: '70px', height: '70px', marginLeft: '10px' }}
                         src={bhImg}
                         alt="behance icon"
                     />

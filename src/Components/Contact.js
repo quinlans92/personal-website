@@ -47,11 +47,11 @@ const Contact = () => {
                 <div className="col-md-6 mb-4" >
                     {/* Contact Details */}
                     <h1 style={{ fontSize: '60px' }}>Let's Connect</h1>
-                    <p style={{ fontSize: '20px' }}>Hey! <FontAwesomeIcon icon={faHandPeace} style={{ color: '#A65151' }} />  Whether you have questions, interests, or simply want to say hello, I would be thrilled to hear from you. Feel free to reach out and share your thoughts, and I'll be sure to respond as soon as possible. Thank you for getting in touch! <FontAwesomeIcon icon={faHeart} style={{ color: '#A65151' }} /></p>
+                    <p style={{ fontSize: '20px' }}>Hey! <FontAwesomeIcon icon={faHandPeace} style={{ color: '#F28705' }} />  Whether you have questions, interests, or simply want to say hello, I would be thrilled to hear from you. Feel free to reach out and share your thoughts, and I'll be sure to respond as soon as possible. Thank you for getting in touch! <FontAwesomeIcon icon={faHeart} style={{ color: '#F28705' }} /></p>
                     <br />
-                    <h3><FontAwesomeIcon icon={faPhone} style={{ color: '#A65151' }} /> : 0834341813</h3>
+                    <h3><FontAwesomeIcon icon={faPhone} style={{ color: '#F28705' }} /> : 0834341813</h3>
                     <br />
-                    <h3><FontAwesomeIcon icon={faAt} style={{ color: '#A65151' }} /> : samantha.quinlan@gmail.com</h3>
+                    <h3><FontAwesomeIcon icon={faAt} style={{ color: '#F28705' }} /> : samantha.quinlan@gmail.com</h3>
                 </div>
                 <div className="col-md-6">
                     {/* Contact Form */}
@@ -77,15 +77,15 @@ const Contact = () => {
                             </div>
                             <div className="d-grid gap-2">
                                 <button type="submit" className="btn-epic btn-primary btn-lg" style={{
-                                    backgroundColor: '#A65151',
-                                    border: isHovered ? '2px solid #A65151' : '2px solid white',
+                                    backgroundColor: '#F28705',
+                                    border: isHovered ? '2px solid #F28705' : '2px solid white',
                                     borderRadius: '30px',
-                                    color: '#A65151',
+                                    color: '#F28705',
                                     display: 'inline-block',
                                     marginTop: '10px', // Add some margin to separate from the title
                                     transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-                                    backgroundColor: isHovered ? '#fff' : '#A65151',
-                                    color: isHovered ? '#A65151' : '#fff',
+                                    backgroundColor: isHovered ? '#fff' : '#F28705',
+                                    color: isHovered ? '#F28705' : '#fff',
                                     transition: 'transform 0.2s ease-in-out',
                                     padding: '10px 20px',
                                     textDecoration: 'none',
@@ -112,15 +112,15 @@ const Contact = () => {
                 <div className="d-flex justify-content-center">
                     <button className="btn btn-primary btn-lg"
                         style={{
-                            backgroundColor: '#A65151',
-                            border: isHovered ? '2px solid white' : '2px solid #A65151',
+                            backgroundColor: '#F28705',
+                            border: isHovered ? '2px solid white' : '2px solid #F28705',
                             borderRadius: '30px',
                             color: '#fff',
                             display: 'inline-block',
                             marginTop: '10px', // Add some margin to separate from the title
                             transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-                            backgroundColor: isHovered ? '#A65151' : '#fff',
-                            color: isHovered ? '#fff' : '#A65151',
+                            backgroundColor: isHovered ? '#F28705' : '#fff',
+                            color: isHovered ? '#fff' : '#F28705',
                             transition: 'transform 0.2s ease-in-out',
                             padding: '10px 20px',
                             textDecoration: 'none',

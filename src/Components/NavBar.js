@@ -39,7 +39,7 @@ function NavBar() {
                                             fontWeight: 'normal',
                                             marginLeft: '30px',
                                             marginRight: '30px',
-                                            color: hoveredLink === 0 ? '#000' : '#A65151'
+                                            color: hoveredLink === 0 ? '#d6d6d6' : '#F28705'
                                         }}
                                     >
                                         Home
@@ -56,7 +56,7 @@ function NavBar() {
                                             fontWeight: 'normal',
                                             marginLeft: '30px',
                                             marginRight: '30px',
-                                            color: hoveredLink === 1 ? '#000' : '#A65151',
+                                            color: hoveredLink === 1 ? '#d6d6d6' : '#F28705',
                                         }}
                                     >
                                         About
@@ -73,7 +73,7 @@ function NavBar() {
                                             fontWeight: 'normal',
                                             marginLeft: '30px',
                                             marginRight: '30px',
-                                            color: hoveredLink === 2 ? '#000' : '#fff',
+                                            color: hoveredLink === 2 ? '#d6d6d6' : '#F28705',
                                         }}
                                     >
                                         Projects
@@ -90,7 +90,7 @@ function NavBar() {
                                             fontWeight: 'normal',
                                             marginLeft: '30px',
                                             marginRight: '30px',
-                                            color: hoveredLink === 3 ? '#000' : '#fff',
+                                            color: hoveredLink === 3 ? '#d6d6d6' : '#F28705',
                                         }}
                                     >
                                         Contact

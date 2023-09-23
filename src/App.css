@@ -1,5 +1,7 @@
 *body {
   font-family: 'Roboto', sans-serif;
+  color: #F2F2F2;
+  height: 100vh;
 
 }
 
@@ -7,69 +9,22 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.opposite-center {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-* body {
-  height: 100vh;
-  background: linear-gradient(to right,
-      white 0%,
-      white 50%,
-      #A65151 50%,
-      #A65151 100%);
-}
-
-
-
-.abt-container {
-  padding-top: 30px;
-  background-color: #A65151;
-
-}
 
 .projects-container {
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 300px;
-  background-color: #A65151;
 }
 
 
 .navbar-container {
   margin-top: 10px;
 
-  background: linear-gradient(to right,
-      white 0%,
-      white 50%,
-      #A65151 50%,
-      #A65151 100%);
+  background-color: #044d4e;
   border-radius: 48px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
-
-
-.pinkCont {
-  background-color: #A65151;
-}
-
-.whiteBg {
-  background-color: #fff;
-}
-
-/* .navbar-container::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to left,
-      white 0%,
-      white 50%,
-      #A65151 50%,
-      #A65151 100%);
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=IBM+Plex+Mono:ital,wght@0,700;1,500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Style+Script&display=swap');
@@ -78,23 +33,10 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Oswald:wght@200;300&family=Petit+Formal+Script&family=Sacramento&family=Style+Script&display=swap');
-/* 
-.fC {
-  font-family: 'Handjet', cursive;
-}
 
-.objectiveText {
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.designer {
-  font-family: 'Oswald', sans-serif;
-
-} */
 
 .myS {
   font-family: 'Sacramento', cursive;
-  color: #fff;
   padding-top: 30px;
 }
 
@@ -114,17 +56,6 @@
   top: 85%;
 
 }
-
-.bg {
-  background-color: rgb(255, 255, 255, 0.9);
-  border-bottom: 8px solid rgb(166, 81, 81);
-  border-top: 8px solid rgb(166, 81, 81);
-
-}
-
-/* .codeIcons {
-  float: right;
-} */
 
 
 .popup-container {
@@ -151,13 +82,12 @@
 .skills-container {
   padding: 50px;
 
-  background-color: white;
-  /* Adjust the value as per your requirement */
+
 }
 
 
 .card-body {
-  background-color: rgb(166, 81, 81, 0.9);
+  background-color: #025959;
   padding: 20px;
 
 }
@@ -166,47 +96,11 @@
   padding-bottom: 200px;
 }
 
-
-
-
-
-.opposite-center {
-  position: fixed;
-  top: 70%;
-  left: 50%;
-  /* Optionally, you can center it horizontally as well */
-  transform: translateX(-50%);
+.equal-height-cols {
   display: flex;
-  justify-content: center;
 }
 
-.opposite-center h1 {
-  font-size: 100px;
-  margin-left: 25px;
-
-}
-
-.hello {
-  background-color: (255, 255, 255, 0.5);
-}
-
-.col-sm-12-p {
-  position: absolute;
-  top: 45%;
-  right: 25%;
-}
-
-.col-sm-12-i {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-}
-
-
-
-
-
-.welcome-sidebar {
+*/ .welcome-sidebar {
   position: fixed;
   top: 50%;
   right: 0;
@@ -279,7 +173,7 @@
 .samImg {
   width: 300px;
   height: 300px;
-  object-fit: cover;
+
 }
 
 
