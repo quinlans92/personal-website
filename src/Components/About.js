@@ -72,7 +72,7 @@ const About = () => {
     };
 
     return (
-        <div className="container-fluid abt-container" style={{ backgroundColor: '#F2F2F2' }}>
+        <div className="container-fluid abt-container" style={{ backgroundColor: '#fff' }}>
             <div className="row">
                 <div
                     className="col-sm-12 text-center full-width-image-container"
@@ -88,7 +88,7 @@ const About = () => {
                     <img src={view} alt="view" style={{ width: '100%', height: 'auto' }} />
                 </div>
                 <div className="col-sm-12 text-center" >
-                    <h1 className="myS" style={{ fontSize: '60px' }}>My Story</h1>
+                    <h1 className="myS" style={{ fontSize: '60px', color: '#025959' }}>My Story</h1>
                     <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', padding: '50px' }}>
                         Hey there! Let me share a little bit about my journey. I've always had this deep love for creativity and art—it's what truly drives me. I made the decision to head back to college as a mature student because I knew I had to follow my passion and pursue a career in the creative space.
                         Throughout my college journey, I've discovered a profound fascination with technology. Curiosity has been my constant companion.
@@ -100,8 +100,8 @@ const About = () => {
                     <div className='heading' style={{ textAlign: 'center' }}>
                         <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#025959', marginBottom: '50px' }}>Skills and Software</h2>
                     </div>
-                    <div className='row' style={{ justifyContent: 'center', maxWidth: '900px', margin: '0 auto' }}>
-                        <div className="col-md-3 col-sm-6 col-6">
+                    <div className='row' >
+                        {/* <div className="col-md-12">
                             <img
                                 className="skill-image"
                                 src={html}
@@ -210,16 +210,20 @@ const About = () => {
                                 onMouseEnter={handleImageTwoHover}
                                 onMouseLeave={handleImageTwoLeave}
                             />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={figma}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
+                        </div> */}
+                        <div className="col-md-12">
+                            <h1 style={{ color: '#F28705', fontSize: '40px', fontWeight: 'bold', paddingLeft: '50px' }}>Figma</h1>
+                            <div>
+                                <img
+                                    className="skill-image"
+                                    src={figma}
+                                    style={{ marginBottom: '30px', paddingLeft: '50px' }}
+                                    alt="Image 2"
+                                    onMouseEnter={handleImageTwoHover}
+                                    onMouseLeave={handleImageTwoLeave}
+                                />
+                                <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', paddingLeft: '50px' }}><span style={{ fontStyle: 'italic' }}>Projects Using Figma</span>:<br /> React Recipe App Mockup <br /> Travel website Mockup <br /> HTML 6 Page Static Website Mockup</p>
+                            </div>
                         </div>
                     </div>
                     <br />

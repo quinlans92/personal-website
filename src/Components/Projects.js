@@ -5,7 +5,7 @@ const Projects = ({ projects }) => {
     const [highlightedRecipe, setHighlightedRecipe] = useState(null);
 
     return (
-        <div className="container-fluid projects-container" style={{ backgroundColor: '#c8f7f8' }}>
+        <div className="container-fluid projects-container" style={{ backgroundColor: '#fff' }}>
             <div className="row">
                 {projects.map((item) => (
                     <div
@@ -19,7 +19,7 @@ const Projects = ({ projects }) => {
                             style={{
                                 borderRadius: '9px',
                                 border: 'none',
-                                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
                                 width: '100%', // Adjust the card's width to fill the column
                             }}
                         >
@@ -35,27 +35,27 @@ const Projects = ({ projects }) => {
                                     }}
                                 />
                             </Link>
-                            <div className="card-body">
+                            <div className="card-body" style={{ borderRadius: '0 0 9px 9px' }}>
                                 <h3 className="card-title" style={{ color: '#f28705', float: 'left' }}>
                                     {item.Project}
                                 </h3>
                                 <br />
                                 <br />
-                                <p className="card-title" style={{ color: '#c8f7f8', float: 'left' }}>
+                                <p className="card-title" style={{ color: '#fff', float: 'left' }}>
                                     {item.category}
                                 </p>
                                 <div style={{ clear: 'both' }}></div>
                                 <Link
                                     style={{
                                         backgroundColor: '#025959',
-                                        border: '2px solid #f28705',
+                                        border: '2px solid #fff',
                                         borderRadius: '30px',
                                         color: '#d6d6d6',
                                         display: 'inline-block',
                                         marginTop: '10px', // Add some margin to separate from the title
                                         transform: highlightedRecipe === item.id ? 'scale(1.1)' : 'scale(1)',
-                                        backgroundColor: highlightedRecipe === item.id ? '#c8f7f8' : '#025959',
-                                        color: highlightedRecipe === item.id ? '#025959' : '#f28705',
+                                        backgroundColor: highlightedRecipe === item.id ? '#fff' : '#025959',
+                                        color: highlightedRecipe === item.id ? '#025959' : '#fff',
                                         transition: 'transform 0.2s ease-in-out',
                                         padding: '10px 20px',
                                         textDecoration: 'none',

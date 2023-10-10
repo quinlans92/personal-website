@@ -1,6 +1,6 @@
 *body {
   font-family: 'Roboto', sans-serif;
-  color: #F2F2F2;
+  color: #fff;
   height: 100vh;
 
 }
@@ -57,6 +57,22 @@
 
 }
 
+.image-and-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.skill-image {
+  margin-bottom: 30px;
+}
+
+.skill-description {
+  color: #025959;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  /* Adjust the padding to your preference */
+}
 
 .popup-container {
   position: absolute;

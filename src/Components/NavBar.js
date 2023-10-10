@@ -22,7 +22,7 @@ function NavBar() {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
             <div className="container navbar-container">
                 <Navbar expand="lg" className="navbar">
-                    <Container style={{ backgroundClip: '##D9B1A3' }}>
+                    <Container >
                         <Navbar.Toggle aria-controls="basic-navbar-nav">
                             <span className="navbar-toggler-icon"></span>
                         </Navbar.Toggle>
