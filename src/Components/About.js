@@ -100,129 +100,219 @@ const About = () => {
                     <div className='heading' style={{ textAlign: 'center' }}>
                         <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#025959', marginBottom: '50px' }}>Skills and Software</h2>
                     </div>
-                    <div className='row' >
-                        {/* <div className="col-md-12">
-                            <img
-                                className="skill-image"
-                                src={html}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 1"
-                                onMouseEnter={handleImageOneHover}
-                                onMouseLeave={handleImageOneLeave}
-                            />
+                    <div className="row" >
+                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>HTML</h2>                            <img
+                                    className="skill-image"
+                                    src={html}
+                                    style={{ marginBottom: '30px' }}
+                                    alt="Image 1"
+                                    onMouseEnter={handleImageOneHover}
+                                    onMouseLeave={handleImageOneLeave}
+                                />
+                            </div>
                         </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={css}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={js}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={p5}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={react}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={dw}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={vs}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={ps}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={ai}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={ae}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div>
-                        <div className="col-md-3 col-sm-6 col-6">
-                            <img
-                                className="skill-image"
-                                src={lr}
-                                style={{ marginBottom: '30px' }}
-                                alt="Image 2"
-                                onMouseEnter={handleImageTwoHover}
-                                onMouseLeave={handleImageTwoLeave}
-                            />
-                        </div> */}
-                        <div className="col-md-12">
-                            <h1 style={{ color: '#F28705', fontSize: '40px', fontWeight: 'bold', paddingLeft: '50px' }}>Figma</h1>
-                            <div>
+                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>CSS</h2>
                                 <img
                                     className="skill-image"
-                                    src={figma}
-                                    style={{ marginBottom: '30px', paddingLeft: '50px' }}
+                                    src={css}
+                                    style={{ marginBottom: '30px' }}
                                     alt="Image 2"
                                     onMouseEnter={handleImageTwoHover}
                                     onMouseLeave={handleImageTwoLeave}
                                 />
-                                <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', paddingLeft: '50px' }}><span style={{ fontStyle: 'italic' }}>Projects Using Figma</span>:<br /> React Recipe App Mockup <br /> Travel website Mockup <br /> HTML 6 Page Static Website Mockup</p>
+                            </div>
+                        </div>
+                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Javascript</h2>
+                                <img
+                                    className="skill-image"
+                                    src={js}
+                                    style={{ marginBottom: '30px' }}
+                                    alt="Image 2"
+                                    onMouseEnter={handleImageTwoHover}
+                                    onMouseLeave={handleImageTwoLeave}
+                                />
+                            </div>
+                        </div>
+                        <div className="row" >
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>p5</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={p5}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using p5</span>:<br />
+                                        Kids Weather App <br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>React</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={react}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using React</span>:<br />
+                                        React recipe App <br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Dreamweaver</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={dw}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using Dreamweaver</span>:<br />
+                                        HTML Acme Homes Website
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row" >
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Visual Studio</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={vs}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', paddingBottom: '30px' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using Visual Studio</span>:<br />
+                                        C-sharp game<br />
+                                        React recipe App <br />
+                                        Jquery To Do List App <br />
+                                        p5 Kids Weather App <br />
+                                        PHP eccomerce website <br />
+                                        PHP CV
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Photoshop</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={ps}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', paddingBottom: '30px' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects using Photoshop</span>:<br />
+                                        Media Capture <br />
+                                        Poster Design with Rule restrictions<br />
+                                        infographic<br />
+                                        package design<br />
+                                        Album cover design<br />
+                                        Many personal projects
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>After Effects</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={ai}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold', paddingBottom: '30px' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using After Effects</span>:<br />
+                                        Designing visuals for sound <br />
+                                        Clothing website  motion mockup<br />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>After Effects</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={ae}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 1"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using After Effects</span>:<br />
+                                        Designing visuals for sound <br />
+                                        Clothing website  motion mockup
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Lightroom</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={lr}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                    <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                        <span style={{ fontStyle: 'italic' }}>Projects Using Lightroom</span>:<br />
+                                        Media Capture <br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }} >
+                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Figma</h2>
+                                    <div>
+                                        <img
+                                            className="skill-image"
+                                            src={figma}
+                                            style={{ marginBottom: '30px' }}
+                                            alt="Image 3"
+                                            onMouseEnter={handleImageTwoHover}
+                                            onMouseLeave={handleImageTwoLeave}
+                                        />
+                                        <p style={{ color: '#025959', fontSize: '20px', fontWeight: 'bold' }}>
+                                            <span style={{ fontStyle: 'italic' }}>Projects Using Figma</span>:<br />
+                                            React Recipe App Mockup <br />
+                                            Travel website Mockup <br />
+                                            HTML 6 Page Static Website Mockup
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
