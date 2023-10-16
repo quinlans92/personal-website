@@ -40,7 +40,7 @@ const SingleProject = ({ projects }) => {
     console.log("projectToDisplay:", projectToDisplay);
 
     return (
-        <div className="container-fluid" style={{ paddingTop: '100px', backgroundColor: '#A65151' }}>
+        <div className="container-fluid" style={{ paddingTop: '200px', backgroundColor: '#A65151' }}>
             <div className="row">
                 <div className="col-md-12 text-center">
                     <h1 style={{ color: '#fff' }}>{projectToDisplay.Project}</h1>

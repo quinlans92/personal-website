@@ -100,48 +100,74 @@ const About = () => {
                     <div className='heading' style={{ textAlign: 'center' }}>
                         <h2 className='headingsAbout' style={{ fontWeight: 'bold', color: '#025959', marginBottom: '50px' }}>Skills and Software</h2>
                     </div>
-                    <div className="row" >
-                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
-                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>HTML</h2>                            <img
-                                    className="skill-image"
-                                    src={html}
-                                    style={{ marginBottom: '30px' }}
-                                    alt="Image 1"
-                                    onMouseEnter={handleImageOneHover}
-                                    onMouseLeave={handleImageOneLeave}
-                                />
+                    <div className='softwareBox container fluid'>
+                        <div className="row" >
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>HTML</h2>                            <img
+                                        className="skill-image"
+                                        src={html}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 1"
+                                        onMouseEnter={handleImageOneHover}
+                                        onMouseLeave={handleImageOneLeave}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
-                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>CSS</h2>
-                                <img
-                                    className="skill-image"
-                                    src={css}
-                                    style={{ marginBottom: '30px' }}
-                                    alt="Image 2"
-                                    onMouseEnter={handleImageTwoHover}
-                                    onMouseLeave={handleImageTwoLeave}
-                                />
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>CSS</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={css}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                            <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
-                                <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Javascript</h2>
-                                <img
-                                    className="skill-image"
-                                    src={js}
-                                    style={{ marginBottom: '30px' }}
-                                    alt="Image 2"
-                                    onMouseEnter={handleImageTwoHover}
-                                    onMouseLeave={handleImageTwoLeave}
-                                />
+                            <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
+                                    <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Javascript</h2>
+                                    <img
+                                        className="skill-image"
+                                        src={js}
+                                        style={{ marginBottom: '30px' }}
+                                        alt="Image 2"
+                                        onMouseEnter={handleImageTwoHover}
+                                        onMouseLeave={handleImageTwoLeave}
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className="row" >
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>p5</h2>
                                     <img
                                         className="skill-image"
@@ -158,7 +184,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>React</h2>
                                     <img
                                         className="skill-image"
@@ -175,7 +207,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Dreamweaver</h2>
                                     <img
                                         className="skill-image"
@@ -194,7 +232,13 @@ const About = () => {
                         </div>
                         <div className="row" >
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Visual Studio</h2>
                                     <img
                                         className="skill-image"
@@ -216,7 +260,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Photoshop</h2>
                                     <img
                                         className="skill-image"
@@ -238,7 +288,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>After Effects</h2>
                                     <img
                                         className="skill-image"
@@ -259,7 +315,13 @@ const About = () => {
 
                         <div className="row">
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>After Effects</h2>
                                     <img
                                         className="skill-image"
@@ -277,7 +339,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }}>
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Lightroom</h2>
                                     <img
                                         className="skill-image"
@@ -294,7 +362,13 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-12 text-center" style={{ marginBottom: '30px' }} >
-                                <div style={{ border: '2px solid #025959', borderRadius: '9px', height: '100%', paddingBottom: '20px' }}>
+                                <div style={{
+                                    border: 'none',
+                                    borderRadius: '9px',
+                                    height: '100%',
+                                    paddingBottom: '20px',
+                                    boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.2)'  // Use negative values for shadow offsets
+                                }}>
                                     <h2 style={{ color: '#F28705', fontWeight: 'bold', paddingTop: '30px' }}>Figma</h2>
                                     <div>
                                         <img
