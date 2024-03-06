@@ -12,33 +12,32 @@ const Socials = () => {
     // const isAboutPage = location.pathname === '/about';
 
     return (
-
-        <div className="container sidebar" style={{ color: '#fff', marginLeft: '10px' }}>
+        <div className="sidebar" style={{ width: '100%' }}>
             <div className="socials-sidebar">
                 <a href="https://www.facebook.com">
                     <img className='facebookIcon'
-                        style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                        style={{ width: '72px', height: '72px', marginLeft: '10px' }}
                         src={fbImg}
                         alt="facebook icon"
                     />
                 </a>
                 <a href="https://www.instagram.com">
                     <img className='instagramIcon'
-                        style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                        style={{ width: '72px', height: '72px', marginLeft: '10px' }}
                         src={igImg}
                         alt="insta icon"
                     />
                 </a>
                 <a href="https://www.linkedin.com">
                     <img className='linkedInIcon'
-                        style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                        style={{ width: '72px', height: '72px', marginLeft: '10px' }}
                         src={liImg}
                         alt="linkedIn icon"
                     />
                 </a>
                 <a href="https://www.linkedin.com">
                     <img className='behanceIcon'
-                        style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                        style={{ width: '72px', height: '72px', marginLeft: '10px' }}
                         src={bhImg}
                         alt="behance icon"
                     />

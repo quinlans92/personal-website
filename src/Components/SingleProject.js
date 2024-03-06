@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Import the GitHub icon
 
 
@@ -30,7 +32,25 @@ const SingleProject = ({ projects }) => {
 
     const [isHighlighted, setIsHighlighted] = useState(false); // Initialize isHighlighted state
 
+    const [currentSlide, setCurrentSlide] = useState(0);
 
+    const nextSlide = () => {
+        setCurrentSlide((currentSlide + 1) % projectToDisplay.sketch.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((currentSlide - 1 + projectToDisplay.sketch.length) % projectToDisplay.sketch.length);
+    };
+
+    const [currentCb, setCurrentCb] = useState(0);
+
+    const nextCb = () => {
+        setCurrentCb((currentCb + 1) % projectToDisplay.creativeBrief.length);
+    };
+
+    const prevCb = () => {
+        setCurrentCb((currentCb - 1 + projectToDisplay.creativeBrief.length) % projectToDisplay.creativeBrief.length);
+    };
 
     let projectToDisplay;
     projectToDisplay = projects.find((item) => (
@@ -38,12 +58,11 @@ const SingleProject = ({ projects }) => {
     ));
 
     console.log("projectToDisplay:", projectToDisplay);
-
     return (
-        <div className="container-fluid" style={{ paddingTop: '200px', backgroundColor: '#A65151' }}>
+        <div className="container-fluid" style={{ paddingTop: '200px' }}>
             <div className="row">
                 <div className="col-md-12 text-center">
-                    <h1 style={{ color: '#fff' }}>{projectToDisplay.Project}</h1>
+                    <h1 style={{ color: '#025959' }}>{projectToDisplay.Project}</h1>
                     <br /><br /><br />
                     <Link to={`/projects/${projectToDisplay.id}`}>
                         <img
@@ -55,18 +74,19 @@ const SingleProject = ({ projects }) => {
                 </div>
                 <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Objective</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Objective</h3>
                         {projectToDisplay.objective.map((objective, index) => (
-                            <p key={index} className='objectiveText' style={{ fontSize: '20px', color: '#000', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px' }}>{objective}</p>
+                            <p key={index} className='objectiveText' style={{ fontSize: '20px', color: '#025959', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px' }}>{objective}</p>
                         ))}
                     </div>
                 </div>
                 <div className="col-md-12 text-center mt-4">
-                    <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>
+                    <div className='col-md-8 offset-md-2 text-center'
+                        style={{ border: '2px solid #f28705', borderRadius: '9px' }}>
+                        <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>
                             {projectToDisplay.projectType === 'Brainstorming' ? 'Brainstorming' : 'User Flow Diagram'}
                         </h3>
-                        <Link to={`/projects/${projectToDisplay.id}`}>
+                        <Link to={`/projects/${projectToDisplay.id}`} >
                             {projectToDisplay.projectType === 'Brainstorming' ? (
                                 <img
                                     src={projectToDisplay.brainstorming}
@@ -89,15 +109,39 @@ const SingleProject = ({ projects }) => {
                     <div className="col-md-12 text-center mt-4 whiteBg">
                         <div className='col-md-8 offset-md-2 text-center'>
                             <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Our Team's Creative Brief</h3>
-                            {projectToDisplay.creativeBrief.map((imagePath, index) => (
+                            <div style={{ position: 'relative' }}>
+                                <button onClick={nextCb} style={{
+                                    border: 'none',
+                                    background: 'none',
+                                    padding: '0',
+                                    cursor: 'pointer',
+                                }}>
+                                    <FontAwesomeIcon icon={faAngleLeft}
+                                        style={{
+                                            color: '#f28705',
+                                            width: '60px',
+                                            height: '60px'
+                                        }} /></button>
+
                                 <img
-                                    key={index}
                                     className="img-fluid"
-                                    style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
-                                    src={imagePath}
-                                    alt={`Our Team's Creative Brief ${index + 1}`}
+                                    style={{ marginBottom: '10px', width: '60%', height: 'auto', border: '2px solid #f28705', borderRadius: '9px' }}
+                                    src={projectToDisplay.creativeBrief[currentCb]}
+                                    alt={`Our Team's Creative Brief ${currentCb + 1}`}
                                 />
-                            ))}
+                                <button onClick={prevCb} style={{
+                                    border: 'none',
+                                    background: 'none',
+                                    padding: '0',
+                                    cursor: 'pointer',
+                                }}>
+                                    <FontAwesomeIcon icon={faAngleRight}
+                                        style={{
+                                            color: '#f28705',
+                                            width: '60px',
+                                            height: '60px'
+                                        }} /></button>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -109,7 +153,7 @@ const SingleProject = ({ projects }) => {
                                 <img
                                     src={projectToDisplay.projectMap}
                                     alt="Brainstorming"
-                                    style={{ width: '80%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px', marginBottom: '30px' }}
+                                    style={{ width: '60%', height: 'auto', border: '2px solid #f28705', borderRadius: '9px', marginBottom: '30px' }}
                                 />
                             </Link>
                         </div>
@@ -119,59 +163,85 @@ const SingleProject = ({ projects }) => {
                 <div className='d-flex justify-content-center whiteBg' >
                     <div className='col-md-8' style={{ marginBottom: '30px' }}>
                         <div className='text-center'>
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Problems To Solve</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Problems To Solve</h3>
                         </div>
                         {projectToDisplay.ProblemsToSolve.map((ProblemsToSolve, index) => (
-                            <div key={index} className="bg-A65151 p-3 rounded mb-3 pinkCont">
-                                <p className="text-white" style={{ fontWeight: 'bold' }}>{ProblemsToSolve}</p>
+                            <div key={index} style={{
+                                border: '3px solid #025959',
+                                backgroundColor: '#025959',
+                                borderRadius: '9px',
+                                padding: '10px',
+                                marginBottom: '20px'
+                            }}>
+                                <p style={{ fontWeight: 'bold', color: '#fff' }}>{ProblemsToSolve}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="col-md-12 text-center mt-4">
-                    <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Early Sketch/MockUp</h3>
-                        {projectToDisplay.sketch.map((imagePath, index) => (
-                            <img key={index}
-                                className="img-fluid"
-                                style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
-                                src={imagePath}
-                                alt={`Early Sketch/MockUp ${index + 1}`} />
-                        ))}
-                    </div>
+                <div className="col-md-8 offset-md-2 text-center mt-4">
+
+                    <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Early Sketch/MockUp</h3>
+                    <button className="carousel-arrow prev"
+                        onClick={prevSlide}
+                        style={{
+                            border: 'none',
+                            background: 'none',
+                            padding: '0',
+                            cursor: 'pointer',
+                        }}>
+                        <FontAwesomeIcon icon={faAngleLeft}
+                            style={{
+                                color: '#f28705',
+                                width: '60px',
+                                height: '60px'
+                            }} /></button>
+                    <img
+                        className="img-fluid"
+                        style={{
+                            width: '85%',
+                            height: '800px',
+                            border: '3px solid #f28705',
+                            borderRadius: '9px',
+
+                        }}
+                        src={projectToDisplay.sketch[currentSlide]}
+                        alt={`Early Sketch/MockUp ${currentSlide + 1}`}
+                    />
+
+                    <button className="carousel-arrow next" onClick={nextSlide}
+                        style={{
+                            border: 'none',
+                            background: 'none',
+                            padding: '0',
+                            cursor: 'pointer',
+                        }}>
+                        <FontAwesomeIcon icon={faAngleRight}
+                            style={{
+                                color: '#f28705',
+                                width: '60px',
+                                height: '60px'
+                            }} />
+                    </button>
                 </div>
-                {/* <div className="col-md-12 text-center mt-4 whiteBg">
-                    <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Mockup</h3>
-                        <Link to={`/projects/${projectToDisplay.id}`}>
-                            <img
-                                src={projectToDisplay.bwMockUp}
-                                alt="Brainstorming"
-                                className="img-fluid"
-                                style={{ width: '100%', height: 'auto', marginBottom: '30px', border: '3px solid #000', borderRadius: '9px' }}
-                            />
-                        </Link>
-                    </div>
-                </div> */}
                 <div className="col-md-12 text-center mt-4 whiteBg">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
+                        <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Color Palettes Considered</h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
                             <img
                                 src={projectToDisplay.colorPallete}
                                 alt="Brainstorming"
                                 className="img-fluid"
-                                style={{ width: '100%', height: 'auto', border: '3px solid white', borderRadius: '9px' }}
+                                style={{ width: '100%', height: '80%', border: '3px solid #f28705', borderRadius: '9px' }}
                             />
                         </Link>
                         {projectToDisplay.colorPalleteDes.map((colorPalleteDes, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#025959', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{colorPalleteDes}</p>
                         ))}
                     </div>
                 </div>
                 <div className="col-md-12 text-center mt-4">
                     <div className='col-md-8 offset-md-2 text-center'>
-                        <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>
+                        <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>
                             {projectToDisplay.titleDesign === 'Fonts' ? 'Fonts' : 'Logo'}
                         </h3>
                         <Link to={`/projects/${projectToDisplay.id}`}>
@@ -180,7 +250,7 @@ const SingleProject = ({ projects }) => {
                                     src={projectToDisplay.font}
                                     alt="Brainstorming"
                                     className="img-fluid"
-                                    style={{ width: '100%', height: 'auto', border: '2px solid #000', borderRadius: '9px' }}
+                                    style={{ width: '100%', height: 'auto', border: '3px solid #f28705', borderRadius: '9px' }}
                                 />
                             ) : (
                                 <div>
@@ -190,7 +260,7 @@ const SingleProject = ({ projects }) => {
                                                 src={logo}
                                                 alt={`Logo ${index + 1}`}
                                                 className="img-fluid"
-                                                style={{ backgroundColor: '#3C4040', width: '80%', height: 'auto', border: '2px solid #000', borderRadius: '9px', marginBottom: '10px' }}
+                                                style={{ width: '80%', height: 'auto', border: '2px solid #025959', borderRadius: '9px', marginBottom: '10px' }}
                                             />
                                         </div>
                                     ))}
@@ -198,30 +268,58 @@ const SingleProject = ({ projects }) => {
                             )}
                         </Link>
                         {projectToDisplay.fontDesc.map((fontDesc, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#fff', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#025959', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px', }}>{fontDesc}</p>
                         ))}
                     </div>
                 </div>
                 <div className="col-md-12 text-center mt-4 whiteBg">
-                    <div className='col-md-12 text-center'> {/* Change col-md-8 to col-md-12 */}
+                    <div className='col-md-8 offset-md-2 text-center'> {/* Change col-md-8 to col-md-12 */}
                         {projectToDisplay.graphicsOnlyProject ? (
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Project Outcome</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Project Outcome</h3>
                         ) : (
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Final Mockup</h3>
                         )}
 
                         <div className="col-md-12"> {/* Add a new col-md-12 container */}
-                            {projectToDisplay.finalMocup.map((imagePath, index) => (
-                                <img key={index}
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                                <button onClick={nextSlide} style={{
+                                    border: 'none',
+                                    background: 'none',
+                                    padding: '0',
+                                    cursor: 'pointer',
+                                }}>
+                                    <FontAwesomeIcon icon={faAngleLeft}
+                                        style={{
+                                            color: '#f28705',
+                                            width: '60px',
+                                            height: '60px'
+                                        }} />
+                                </button>
+                                <img
                                     className="img-fluid"
-                                    style={{ marginBottom: '10px', width: '100%', height: 'auto', border: '3px solid #A65151', borderRadius: '9px' }}
-                                    src={imagePath}
-                                    alt={`Mockup ${index + 1}`} />
-                            ))}
+                                    style={{ marginBottom: '10px', maxWidth: '100%', maxHeight: '500px', border: '3px solid #f28705', borderRadius: '9px' }}
+                                    src={projectToDisplay.finalMocup[currentSlide]}
+                                    alt={`Mockup ${currentSlide + 1}`}
+                                />
+                                {/* Navigation buttons */}
+                                <button onClick={prevSlide}
+                                    style={{
+                                        border: 'none',
+                                        background: 'none',
+                                        padding: '0',
+                                        cursor: 'pointer',
+                                    }}>
+                                    <FontAwesomeIcon icon={faAngleRight}
+                                        style={{
+                                            color: '#f28705',
+                                            width: '60px',
+                                            height: '60px'
+                                        }} /></button>
+                            </div>
                         </div>
 
                         {projectToDisplay.finalMockUpDesc.map((finalMockUpDesc, index) => (
-                            <p key={index} style={{ fontSize: '20px', color: '#A65151', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{finalMockUpDesc}</p>
+                            <p key={index} style={{ fontSize: '20px', color: '#025959', paddingLeft: '30px', paddingRight: '30px', marginBottom: '30px', marginTop: '30px' }}>{finalMockUpDesc}</p>
                         ))}
                     </div>
                 </div>
@@ -230,12 +328,12 @@ const SingleProject = ({ projects }) => {
                 <div className="col-md-12 d-flex justify-content-center ">
                     <div className="col-md-8">
                         <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Features</h3>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{ marginBottom: '30px' }}>
                             {projectToDisplay.features.map((feature, index) => (
-                                <div key={index} className="bg-A65151 p-3 rounded mb-3" style={{ backgroundColor: '#fff', width: '200px' }}>
-                                    <p style={{ color: '#A65151', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
+                                <div key={index} className="bg p-3 rounded mb-3" style={{ backgroundColor: '#025959', width: '200px' }}>
+                                    <p style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0px' }}>{feature}</p>
                                 </div>
                             ))}
                         </div>
@@ -244,7 +342,7 @@ const SingleProject = ({ projects }) => {
                 <div className="col-md-12 d-flex justify-content-center whiteBg" >
                     <div className="col-md-8">
                         <div className="text-center">
-                            <h3 style={{ fontWeight: 'bold', color: '#A65151', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Software</h3>
                             <div className="d-flex flex-wrap justify-content-center">
                                 {projectToDisplay.Software.map((Software, index) => (
                                     <Link key={index} to={`/projects/${projectToDisplay.id}`} style={{ margin: '10px' }}>
@@ -262,16 +360,16 @@ const SingleProject = ({ projects }) => {
                 </div>
                 {!projectToDisplay.graphicsOnlyProject && (
                     <div>
-                        <div className='col-md-12 d-flex justify-content-center'>
-                            <h3 style={{ fontWeight: 'bold', color: '#fff', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
+                        <div className='col-md-8 offset-md-2 d-flex justify-content-center'>
+                            <h3 style={{ fontWeight: 'bold', color: '#025959', marginTop: '30px', marginBottom: '30px' }}>Demo</h3>
                         </div>
-                        <div className='col-md-12 d-flex justify-content-center' style={{ backgroundColor: '#A65151' }}>
+                        <div className='col-md-8 offset-md-2 d-flex justify-content-center' style={{ backgroundColor: '#025959' }}>
                             <video
                                 controls
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    border: '3px solid black',
+                                    border: '3px solid #f28705',
                                     borderRadius: '5px',
                                 }}
                             >
@@ -281,7 +379,7 @@ const SingleProject = ({ projects }) => {
                     </div>
                 )}
 
-                <div className='col-md-12 d-flex justify-content-center whiteBg' style={{ backgroundColor: '#A65151', paddingBottom: '30px' }}>
+                <div className='col-md-12 d-flex justify-content-center whiteBg' style={{ backgroundColor: '#025959', paddingBottom: '30px' }}>
                     {projectToDisplay.isCodeProject && (
                         <div className='codeIcons'>
                             <h3>
@@ -352,7 +450,7 @@ const SingleProject = ({ projects }) => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </div >
     );
 
 

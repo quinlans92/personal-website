@@ -110,7 +110,7 @@ const projects = [
     id: 1,
     dt: ["April 2022"],
     deviceImg: MotionMockUpDevice,
-    sketch: [individualLanding, tlHomeSketch, landingMenuSketch, forHerSketch, cartSketch, sketchCart],
+    sketch: [tlHomeSketch, landingMenuSketch, forHerSketch, cartSketch, sketchCart],
     bwMockUp: "",
     colorPallete: motionMockUpCp,
     colorPalleteDes: ['We chose a color palette of black, white and grey because our research findings recognized a high precentage of leading fashion websites adopted this same minimalistic designs approach. This sleek and clean aesthetic not only resonates with contemporary trends but also enhances the user experience by creating a visually appealing and uncluttered environment. These neutral tones allow the imagery and content to take center stage, ensuring a seamless and engaging browsing experience for users.'],
@@ -177,7 +177,7 @@ const projects = [
     colorPallete: colorPalleteRecipe,
     colorPalleteDes: ['I chose color palette number one for my React recipe app for a few strategic reasons. The dark gray (#3c4040) provides a neutral and elegant background, allowing the vibrant recipe images and content to stand out. From my research I found that multiple food and recipe apps use green in their color pallete and I followed suit. As well as being backed as a popular choice by research, the green (#257C2B) I went with was also intended to represent the idea of freshness and natural ingredients in the culinary world. Meanwhile, the soft pink (#F56BB2) adds a playful touch and a touch personality to the design. The combination of this color pallete ensures readability and a modern, polished look, creating a visually pleasing and user-friendly experience. This color palette not only enhances the aesthetics of my app but also showcases my attention to detail.'],
     userFlowChart: UserFlowChart,
-    Logo: [samLogoSketch, logo],
+    Logo: [samLogoSketch],
     finalMocup: [appMockUp, singleRecipeMocoup, editMockUp, newMockUp, aboutMockUp],
     finalMockUpDesc: ['This marks the end of my design journey – the final mock-up created in Figma. I couldnt be happier with how it all came together. The harmony between my logo and chosen color scheme has lead to a distinctive and visually appealing identity to the app. The careful arrangement of features, as outlined in my user flow diagram, seamlessly translates to this mock-up. With this final mockup ready, I excitedly dived into my first ever React coding project within Visual Studio Code, consistently pushing updates to my GitHub repo as I worked on my project seeing it through to completion.'],
     fontDesc: ['To kick off my logo creation journey, I started with a sharpie. It helped me quickly sketch out the basic logo idea, just to get a feel for how it might look. Once I had a clear picture in my mind, I took to illustrator to create a digital version. In Illustrator, I fine-tuned all the lines and shapes, making it look proffesional. To keep things consistent with my initial sketch, I found a font that had a similar appearance. Then came the fun part – manipulating that font to match the original concept. Finally, I added in those eye-popping colors from my chosen palette.'],
@@ -233,7 +233,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" >
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
@@ -241,8 +241,8 @@ function App() {
           <Route path="/Projects" element={<Projects projects={samsProjects} />} />
           <Route path="/projects/:projectID" element={<SingleProject projects={samsProjects} />} />
         </Routes>
+        <Socials />
       </div>
-      <Socials />
       <NavBar />
     </Router>
   );

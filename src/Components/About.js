@@ -72,7 +72,7 @@ const About = () => {
     };
 
     return (
-        <div className="container-fluid abt-container" style={{ backgroundColor: '#fff' }}>
+        <div className="container-fluid abt-container" style={{ backgroundColor: '#fff', paddingBottom: '200px' }}>
             <div className="row">
                 <div
                     className="col-sm-12 text-center full-width-image-container"
@@ -83,9 +83,10 @@ const About = () => {
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
                         position: 'relative',
+                        height: '600px',
                     }}
                 >
-                    <img src={view} alt="view" style={{ width: '100%', height: 'auto' }} />
+
                 </div>
                 <div className="col-sm-12 text-center" >
                     <h1 className="myS" style={{ fontSize: '60px', color: '#025959' }}>My Story</h1>

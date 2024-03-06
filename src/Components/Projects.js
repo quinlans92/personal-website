@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Projects = ({ projects }) => {
-    const [highlightedRecipe, setHighlightedRecipe] = useState(null);
+    const [highlightedCard, setHighlightedCard] = useState(null);
 
     return (
         <div className="container-fluid projects-container" style={{ backgroundColor: '#fff' }}>
@@ -11,8 +11,8 @@ const Projects = ({ projects }) => {
                     <div
                         className="col-md-6 col-lg-6 mb-4" // Adjust column classes
                         key={item.id}
-                        onMouseEnter={() => setHighlightedRecipe(item.id)}
-                        onMouseLeave={() => setHighlightedRecipe(null)}
+                        onMouseEnter={() => setHighlightedCard(item.id)}
+                        onMouseLeave={() => setHighlightedCard(null)}
                     >
                         <div
                             className="card"
@@ -20,7 +20,7 @@ const Projects = ({ projects }) => {
                                 borderRadius: '9px',
                                 border: 'none',
                                 boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
-                                width: '100%', // Adjust the card's width to fill the column
+                                width: '100%',
                             }}
                         >
                             <Link to={`/projects/${item.id}`}>
@@ -31,7 +31,7 @@ const Projects = ({ projects }) => {
                                     style={{
                                         height: '400px', // Adjust the height to your preference
                                         objectFit: 'cover', // This will make the image fit while maintaining its aspect ratio
-                                        borderRadius: '9px 9px 0 0', // Apply rounded corners to the top
+                                        borderRadius: '9px 9px 0 0',
                                     }}
                                 />
                             </Link>
@@ -46,20 +46,7 @@ const Projects = ({ projects }) => {
                                 </p>
                                 <div style={{ clear: 'both' }}></div>
                                 <Link
-                                    style={{
-                                        backgroundColor: '#025959',
-                                        border: '2px solid #fff',
-                                        borderRadius: '30px',
-                                        color: '#d6d6d6',
-                                        display: 'inline-block',
-                                        marginTop: '10px', // Add some margin to separate from the title
-                                        transform: highlightedRecipe === item.id ? 'scale(1.1)' : 'scale(1)',
-                                        backgroundColor: highlightedRecipe === item.id ? '#fff' : '#025959',
-                                        color: highlightedRecipe === item.id ? '#025959' : '#fff',
-                                        transition: 'transform 0.2s ease-in-out',
-                                        padding: '10px 20px',
-                                        textDecoration: 'none',
-                                    }}
+                                    className="button"
                                     to={`/projects/${item.id}`}
                                 >
                                     View Project
